@@ -18,35 +18,35 @@ export default function IndustrialDivisionPage() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
       
-      {/* Hero with Visual Storytelling & 3D Depth */}
-      <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-amber-950/60 text-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-900/40 shadow-2xl relative overflow-hidden">
+      {/* Hero with Bright Editorial Design */}
+      <section className="bg-gradient-to-br from-amber-50/70 via-white to-slate-50 text-slate-900 rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-200/80 shadow-soft-xl relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           
           <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full text-xs font-bold shadow-xs">
-              <Truck className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-100 text-amber-900 border border-amber-300 rounded-full text-xs font-bold shadow-2xs">
+              <Truck className="w-3.5 h-3.5 text-amber-700" />
               <span>Industrial & Logistics Core • Metro Detroit Focus</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               Industrial, Warehouse & Logistics Staffing
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               From certified forklift drivers and high-output assembly crews to machine trades and warehouse leads, Vibrus Group keeps Michigan manufacturing lines and logistics supply chains moving at peak safety and efficiency.
             </p>
 
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/employers?division=industrial"
-                className="px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg hover:shadow-amber-500/20 transition-all flex items-center gap-2 active:scale-95"
+                className="px-6 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 active:scale-95"
               >
                 <FileCheck2 className="w-4 h-4" />
                 <span>Request Industrial Crew (24/7)</span>
               </Link>
               <Link
                 href="/apply?role=Certified%20Forklift%20Operator"
-                className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg hover:shadow-emerald-500/25 transition-all flex items-center gap-2 active:scale-95"
+                className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 active:scale-95"
               >
                 <Users2 className="w-4 h-4" />
                 <span>Apply for Industrial Roles</span>
@@ -54,9 +54,9 @@ export default function IndustrialDivisionPage() {
             </div>
           </div>
 
-          {/* Visual Showcase Card with 3D Depth */}
+          {/* Visual Showcase Card */}
           <div className="lg:col-span-5 relative group">
-            <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-500">
+            <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group-hover:scale-[1.02] transition-transform duration-500 bg-white">
               <Image
                 src="/images/industrial-logistics-workplace.jpg"
                 alt="Professional logistics warehouse crew performing safe pallet scanning in modern Michigan distribution center"
@@ -65,15 +65,15 @@ export default function IndustrialDivisionPage() {
                 className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
               
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md p-3.5 rounded-xl border border-white/10 shadow-lg">
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200/80 shadow-md">
                 <div className="flex items-center justify-between text-xs">
-                  <span className="font-bold text-white flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <span className="font-bold text-slate-900 flex items-center gap-1.5">
+                    <ShieldCheck className="w-4 h-4 text-amber-600" />
                     <span>OSHA & Safety-Screened</span>
                   </span>
-                  <span className="text-amber-300 font-semibold text-[11px]">
+                  <span className="text-amber-800 font-semibold text-[11px]">
                     Warren • Detroit • Troy
                   </span>
                 </div>

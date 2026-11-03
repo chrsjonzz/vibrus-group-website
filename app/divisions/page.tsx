@@ -38,24 +38,24 @@ export default function DivisionsPage() {
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
       
-      {/* Hero Section with Authentic Photographic Asset */}
-      <section className="bg-gradient-to-br from-slate-900 via-vibrus-navy to-slate-900 text-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-800 shadow-2xl relative overflow-hidden">
+      {/* Hero Section with Bright Editorial Visual Design */}
+      <section className="bg-gradient-to-br from-blue-50/90 via-white to-slate-50 text-slate-900 rounded-3xl p-8 sm:p-12 lg:p-14 border border-blue-100 shadow-soft-xl relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-500/20 text-cyan-300 border border-blue-500/30 rounded-full text-xs font-bold backdrop-blur-md shadow-xs">
-              <Award className="w-3.5 h-3.5 text-cyan-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-blue-100/80 text-blue-800 border border-blue-200 rounded-full text-xs font-bold shadow-2xs">
+              <Award className="w-3.5 h-3.5 text-blue-600" />
               <span>Single Source — Specialized Solutions</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               Specialized Staffing Divisions
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Vibrus Group understands that no two facilities or operational environments are alike. We provide targeted recruitment, thorough credentialing, and fast dispatch across six specialized practice groups.
             </p>
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/employers"
-                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl shadow-lg hover:shadow-blue-500/25 transition-all flex items-center gap-2 active:scale-95"
+                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 active:scale-95"
               >
                 <FileCheck2 className="w-4 h-4" />
                 <span>Request Staff Across Any Division</span>
@@ -64,7 +64,7 @@ export default function DivisionsPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group aspect-[4/3] bg-white">
               <Image
                 src="/images/divisions-multi-industry.jpg"
                 alt="Vibrus Group multi-industry workforce specialists across healthcare, logistics, and technical fields"
@@ -73,13 +73,13 @@ export default function DivisionsPage() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3 p-3 bg-slate-900/90 backdrop-blur-md rounded-xl border border-white/10 text-white text-xs">
-                <div className="font-bold flex items-center gap-1.5 text-cyan-300">
-                  <CheckCircle2 className="w-3.5 h-3.5" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3 p-3 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200/80 text-slate-900 text-xs shadow-md">
+                <div className="font-bold flex items-center gap-1.5 text-blue-800">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" />
                   <span>Six Dedicated Practice Groups</span>
                 </div>
-                <div className="text-[11px] text-slate-300 mt-0.5">
+                <div className="text-[11px] text-slate-600 mt-0.5">
                   Healthcare • Industrial • Office • Professional • IT • Hospitality
                 </div>
               </div>

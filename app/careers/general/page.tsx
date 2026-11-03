@@ -24,23 +24,25 @@ export default function GeneralCareersPage() {
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
-      <section className="bg-gradient-to-br from-slate-950 via-amber-950 to-slate-900 text-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-900/40 shadow-2xl relative overflow-hidden">
+      
+      {/* Bright Editorial Hero */}
+      <section className="bg-gradient-to-br from-amber-50/80 via-white to-slate-50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-200/80 shadow-soft-xl relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-500/20 text-amber-300 border border-amber-500/30 rounded-full text-xs font-bold backdrop-blur-md shadow-xs">
-              <Truck className="w-3.5 h-3.5 text-amber-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-amber-100 text-amber-900 border border-amber-300 rounded-full text-xs font-bold shadow-2xs">
+              <Truck className="w-3.5 h-3.5 text-amber-700" />
               <span>Industrial, Logistics & Technical Careers</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               General & Industrial Careers
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Vibrus Group connects dependable talent with top manufacturing facilities, logistics hubs, automotive assembly lines, and commercial offices across Michigan.
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              Vibrus Group connects dependable talent with top manufacturing facilities, logistics hubs, automotive assembly lines, and commercial offices across Michigan with transparent payroll and safe work environments.
             </p>
             <div className="pt-2">
               <Link
                 href="/apply?role=Certified%20Forklift%20Operator"
-                className="px-6 py-3.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs rounded-xl shadow-lg transition-colors inline-flex items-center gap-2 active:scale-95"
+                className="px-6 py-3.5 bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all inline-flex items-center gap-2 active:scale-95"
               >
                 <span>60-Second Express Application</span>
                 <ArrowRight className="w-4 h-4" />
@@ -49,7 +51,7 @@ export default function GeneralCareersPage() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10 group aspect-[4/3]">
+            <div className="relative rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group aspect-[4/3] bg-white">
               <Image
                 src="/images/industrial-logistics-workplace.jpg"
                 alt="Logistics fulfillment and industrial workforce specialists on facility floor"
@@ -58,14 +60,14 @@ export default function GeneralCareersPage() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-              <div className="absolute bottom-3 left-3 right-3 p-3 bg-slate-900/90 backdrop-blur-md rounded-xl border border-white/10 text-white text-xs">
-                <div className="font-bold flex items-center gap-1.5 text-amber-300">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 right-3 p-3 bg-white/95 backdrop-blur-md rounded-xl border border-slate-200 shadow-md text-slate-900 text-xs">
+                <div className="font-bold flex items-center gap-1.5 text-amber-700">
                   <Wrench className="w-3.5 h-3.5" />
                   <span>Skilled Industrial Workforce</span>
                 </div>
-                <div className="text-[11px] text-slate-300 mt-0.5">
-                  Automotive, warehouse & skilled trades placements
+                <div className="text-[11px] text-slate-600 mt-0.5">
+                  Automotive, warehouse & skilled trades placements across Michigan
                 </div>
               </div>
             </div>

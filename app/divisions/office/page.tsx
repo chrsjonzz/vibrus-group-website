@@ -16,29 +16,31 @@ export default function OfficeDivisionPage() {
 
   return (
     <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
-      <section className="bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+      
+      {/* Bright Editorial Hero */}
+      <section className="bg-gradient-to-br from-slate-100/90 via-white to-blue-50/50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-200/90 shadow-soft-xl relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
           <div className="lg:col-span-7 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-700/80 text-slate-200 rounded-full text-xs font-bold border border-slate-600 shadow-xs">
-              <Building2 className="w-3.5 h-3.5 text-blue-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-slate-200/80 text-slate-800 rounded-full text-xs font-bold border border-slate-300 shadow-2xs">
+              <Building2 className="w-3.5 h-3.5 text-blue-700" />
               <span>Corporate Operations Support</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
+            <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               Office & Administrative Staffing
             </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               Connecting Michigan enterprises with skilled administrative assistants, confidential records managers, and customer support representatives who ensure productive daily operations.
             </p>
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/employers?division=office"
-                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs rounded-xl shadow-lg hover:shadow-blue-500/25 transition-all active:scale-95"
+                className="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95"
               >
                 Request Administrative Staff
               </Link>
               <Link
                 href="/apply?role=Administrative%20Assistant"
-                className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-lg hover:shadow-emerald-500/25 transition-all active:scale-95"
+                className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all active:scale-95"
               >
                 Apply for Office Roles
               </Link>
@@ -46,7 +48,7 @@ export default function OfficeDivisionPage() {
           </div>
 
           <div className="lg:col-span-5 relative group">
-            <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group-hover:scale-[1.02] transition-transform duration-500">
+            <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group-hover:scale-[1.02] transition-transform duration-500 bg-white">
               <Image
                 src="/images/office-professional-collaboration.jpg"
                 alt="Corporate administrative and executive operations professionals collaborating in modern office workspace"
@@ -55,11 +57,14 @@ export default function OfficeDivisionPage() {
                 className="object-cover object-center"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 bg-slate-950/80 backdrop-blur-md p-3.5 rounded-xl border border-white/10 shadow-lg">
-                <span className="font-bold text-white text-xs flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-blue-400" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200 shadow-md">
+                <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-blue-700" />
                   <span>Confidentiality & Skills Screened</span>
+                </span>
+                <span className="text-slate-500 text-[11px] block mt-0.5">
+                  Pre-screened administrative talent across Metro Detroit
                 </span>
               </div>
             </div>
