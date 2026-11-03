@@ -10,7 +10,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 export const metadata: Metadata = generatePageMetadata({
   title: "Hospitality & Dietary Staffing",
   description:
-    "ServSafe-trained banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
+    "Experienced banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
   path: "/divisions/hospitality",
   image: "/images/hospitality-culinary-banquet.jpg",
   imageAlt: "Executive chef and culinary banquet team plating upscale dining service",
@@ -72,10 +72,10 @@ export default function HospitalityDivisionPage() {
               <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-xl border border-slate-200 shadow-md">
                 <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
                   <ShieldCheck className="w-4 h-4 text-rose-700" />
-                  <span>ServSafe & Hospitality Standards</span>
+                  <span>Hospitality & Culinary Standards</span>
                 </span>
                 <span className="text-slate-500 text-[11px] block mt-0.5">
-                  Food safety certified and background screened teams
+                  Food safety oriented and background screened teams
                 </span>
               </div>
             </div>

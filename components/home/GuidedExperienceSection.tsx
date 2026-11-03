@@ -61,10 +61,10 @@ export function GuidedExperienceSection() {
       title: "We Match Pre-Screened Professionals",
       subtitle: "Primary-Source Verified 600+ Roster",
       description:
-        "Our team selects qualified personnel from our roster of 600+ credentialed Michigan professionals. Every candidate is primary-source verified with active state licenses, 10-panel drug screens, and comprehensive background clearances.",
+        "Our team selects qualified personnel from our roster of 600+ credentialed Michigan professionals. Every candidate is primary-source verified with active state licenses, toxicology screening, and comprehensive background clearances.",
       highlights: [
         "Primary-source credential & license verification",
-        "10-panel drug screen & OIG/background clearances",
+        "Pre-placement toxicology & background clearances",
         "600+ vetted professionals across Michigan"
       ],
       image: "/images/how_it_works_facility_2_matching.jpg",
@@ -132,11 +132,11 @@ export function GuidedExperienceSection() {
       title: "Connect With The Vibrus Team & Begin",
       subtitle: "Dedicated Recruiter & Continuous Support",
       description:
-        "Your dedicated staffing coordinator assists with swift credential verification, facility orientation, and immediate shift placement, backed by prompt electronic payroll and 24/7 coordinator assistance.",
+        "Your dedicated staffing coordinator assists with swift credential verification, facility orientation, and immediate shift placement, backed by prompt electronic payroll and dedicated coordinator assistance.",
       highlights: [
         "Personal recruiter dedicated to your placement",
         "Streamlined onboarding & credentialing verification",
-        "Reliable electronic payroll & 24/7 team support"
+        "Reliable electronic payroll & dedicated team support"
       ],
       image: "/images/how_it_works_candidate_3_connect.jpg",
       imageAlt: "Recruiter and job candidate meeting warmly in bright modern office",
@@ -386,7 +386,7 @@ export function GuidedExperienceSection() {
               <Clock className="w-3.5 h-3.5" />
               <span>
                 {activeAudience === "facilities"
-                  ? "Guaranteed 30-Minute Callback Commitment"
+                  ? "30-Minute Callback Commitment"
                   : "Rapid Placement Across Michigan"}
               </span>
             </div>

@@ -18,7 +18,7 @@ import { generatePageMetadata } from "@/lib/config/seo";
 export const metadata: Metadata = generatePageMetadata({
   title: "Credentialing & Compliance Standards",
   description:
-    "Our 6-point verification standard includes primary-source license validation, 10-panel drug screens, and OIG checks for audit-ready placement confidence.",
+    "Our verified clinical credentialing standard includes primary-source license validation, background screenings, and audits for compliant Michigan placements.",
   path: "/compliance",
   image: "/images/hero-staffing-coordination.jpg",
   imageAlt: "Staffing operations and credentialing compliance review at Vibrus Group headquarters",
@@ -31,16 +31,16 @@ export default function CompliancePage() {
       description: "Direct validation with state licensing boards for all RN, LPN, CNA, Therapy, and Allied professional licenses."
     },
     {
-      title: "10-Panel Drug Screen & Toxicology",
-      description: "Comprehensive pre-employment substance screening adhering to stringent healthcare facility protocols."
+      title: "Pre-Placement Toxicology & Health Screens",
+      description: "Comprehensive substance screening adhering to stringent healthcare and facility partner protocols."
     },
     {
       title: "Criminal Background & Fingerprinting",
       description: "Multi-state criminal history searches, ICHAT Michigan state police checks, and sex offender registry screenings."
     },
     {
-      title: "OIG & SAM Federal Exclusion Audits",
-      description: "Monthly Office of Inspector General (OIG) and System for Award Management (SAM) exclusion list checks."
+      title: "Regulatory & Federal Exclusion Audits",
+      description: "Comprehensive federal and state exclusion list checks verified before facility assignment."
     },
     {
       title: "Immunizations & Health Screenings",
@@ -106,14 +106,14 @@ export default function CompliancePage() {
         </div>
       </section>
 
-      {/* The 6-Point Credentialing Protocol */}
+      {/* Pre-Placement Quality Assurance Protocol */}
       <section className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-card space-y-8">
         <div className="space-y-2">
           <span className="text-xs font-bold uppercase tracking-wider text-blue-700">
             Pre-Placement Quality Assurance
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
-            6-Point Clinical & Industrial Quality Assurance
+            Clinical & Industrial Quality Assurance Protocol
           </h2>
           <p className="text-xs text-slate-500">
             Staff arrive at your facility with complete digital credential packets pre-verified and ready for audit.
@@ -169,7 +169,7 @@ export default function CompliancePage() {
             [MANAGEMENT REVIEW CHECKLIST — DEMO STAGE]
           </span>
           <p className="text-xs text-amber-800 mt-0.5">
-            Formal legal disclosures, HIPPA privacy policies, and final production cloud storage selections are documented on our Management Review checklist.
+            Formal legal disclosures, HIPAA privacy policies, and final production cloud storage selections are documented on our Management Review checklist.
           </p>
         </div>
         <Link

@@ -1,4 +1,5 @@
 import React from "react";
+import type { Metadata } from "next";
 import { SplitHero } from "@/components/home/SplitHero";
 import { TrustBar } from "@/components/home/TrustBar";
 import { GuidedExperienceSection } from "@/components/home/GuidedExperienceSection";
@@ -10,6 +11,16 @@ import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
 import { MapPin, Building, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { generatePageMetadata } from "@/lib/config/seo";
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Healthcare & Industrial Staffing",
+  description:
+    "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+  path: "/",
+  image: "/images/hero-staffing-coordination.jpg",
+  imageAlt: "Vibrus Group workforce solutions and staffing coordination in Warren, Michigan",
+});
 
 export default function HomePage() {
   return (

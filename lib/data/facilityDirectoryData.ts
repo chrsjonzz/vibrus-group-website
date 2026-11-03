@@ -5,7 +5,7 @@ export interface ServiceAreaListing {
   city: string;
   county: "Macomb" | "Oakland" | "Wayne" | "Washtenaw" | "Genesee" | "Statewide Michigan";
   focusDescription: string;
-  status: "Active Coverage" | "Immediate Dispatch";
+  status: "Active Coverage" | "24/7 Dispatch Available";
 }
 
 // Illustrative regional service areas (specific partner facility list is held for management approval)
@@ -18,7 +18,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Warren",
     county: "Macomb",
     focusDescription: "Clinical floor coverage, RN / LPN medication nurses, and certified nursing assistants.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
   {
     id: "cov-02",
@@ -45,7 +45,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Warren",
     county: "Macomb",
     focusDescription: "Certified forklift operators, material handlers, shipping/receiving, and inventory staff.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
   {
     id: "cov-05",
@@ -65,7 +65,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Troy",
     county: "Oakland",
     focusDescription: "ICU, Med/Surg RNs, allied health technologists, and respiratory therapists.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
   {
     id: "cov-07",
@@ -101,7 +101,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Auburn Hills",
     county: "Oakland",
     focusDescription: "Assembly machine operators, quality inspectors, and industrial maintenance personnel.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
 
   // Wayne County
@@ -112,7 +112,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Detroit",
     county: "Wayne",
     focusDescription: "Critical care clinical staffing, phlebotomy, and sterile processing technicians.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
   {
     id: "cov-12",
@@ -139,7 +139,7 @@ export const michiganFacilities: ServiceAreaListing[] = [
     city: "Romulus",
     county: "Wayne",
     focusDescription: "Forklift operators, cross-dock personnel, and high-volume freight handlers.",
-    status: "Immediate Dispatch"
+    status: "24/7 Dispatch Available"
   },
   {
     id: "cov-15",

@@ -169,7 +169,7 @@ export const divisionsData: DivisionInfo[] = [
       "Certified Forklift & Heavy Equipment Operators",
       "Skilled Trade Placements (Welders, Fabricators)",
       "High-Volume Seasonal & Peak Surge Staffing",
-      "OSHA-Conscious Pre-Employment Screening"
+      "Safety-Conscious Pre-Employment Screening"
     ],
     jobClassifications: [
       {

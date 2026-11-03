@@ -36,11 +36,13 @@ export function generatePageMetadata({
   const shouldIndex = isProduction && !noIndex;
 
   return {
-    title,
+    title: path === "/" ? `${title} | Vibrus Group` : title,
     description,
-    alternates: {
-      canonical: canonicalUrl,
-    },
+    alternates: isProduction
+      ? {
+          canonical: canonicalUrl,
+        }
+      : undefined,
     robots: shouldIndex
       ? {
           index: true,
@@ -100,7 +102,10 @@ export const schemaOrgData = {
       "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
     telephone: "+1-248-443-5100",
     faxNumber: "+1-248-443-5115",
-    email: "info@vibrusgroup.com",
+    founder: [
+      { "@type": "Person", name: "Paddy" },
+      { "@type": "Person", name: "Achla" },
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: "31201 Chicago Road South, Suite B202",

@@ -13,6 +13,7 @@ export const metadata: Metadata = generatePageMetadata({
   path: "/testimonials",
   image: "/images/hero-staffing-coordination.jpg",
   imageAlt: "Healthcare facility directors and clinicians partnering with Vibrus Group in Michigan",
+  noIndex: true,
 });
 
 export default function TestimonialsPage() {

@@ -11,7 +11,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 export const metadata: Metadata = generatePageMetadata({
   title: "Industrial & Logistics Staffing",
   description:
-    "OSHA-safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
+    "Safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
   path: "/divisions/industrial",
   image: "/images/industrial-logistics-workplace.jpg",
   imageAlt: "Industrial logistics and warehouse specialists collaborating on Michigan facility floor",
@@ -82,7 +82,7 @@ export default function IndustrialDivisionPage() {
                 <div className="flex items-center justify-between text-xs">
                   <span className="font-bold text-slate-900 flex items-center gap-1.5">
                     <ShieldCheck className="w-4 h-4 text-amber-600" />
-                    <span>OSHA & Safety-Screened</span>
+                    <span>Safety-Screened Personnel</span>
                   </span>
                   <span className="text-amber-800 font-semibold text-[11px]">
                     Warren • Detroit • Troy

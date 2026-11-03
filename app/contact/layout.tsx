@@ -2,13 +2,12 @@ import type { Metadata } from "next";
 import { generatePageMetadata } from "@/lib/config/seo";
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Contact Our Warren, MI Headquarters",
+  title: "Contact Staffing Operations Desk",
   description:
-    "Reach Vibrus Group in Warren, MI. Call (248) 443-5100 for 24/7 staffing dispatch, employee support, or local workforce consultations across Southeast Michigan.",
+    "Connect with Vibrus Group operations headquarters in Warren, Michigan. Reach our 24/7 staffing dispatch line or submit shift staffing requests online.",
   path: "/contact",
   image: "/images/hero-staffing-coordination.jpg",
-  imageAlt:
-    "Vibrus Group headquarters office and staffing dispatch desk in Warren, Michigan",
+  imageAlt: "Vibrus Group Warren Michigan office operations and staffing dispatch desk",
 });
 
 export default function ContactLayout({

@@ -129,7 +129,7 @@ export function SearchableFacilityDirectory() {
                 </span>
                 <span
                   className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${
-                    area.status === "Immediate Dispatch"
+                    area.status === "24/7 Dispatch Available"
                       ? "bg-amber-100 text-amber-800"
                       : "bg-emerald-100 text-emerald-800"
                   }`}

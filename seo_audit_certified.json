@@ -1,0 +1,2914 @@
+{
+  "audit_timestamp": "2026-11-03T20:50:00Z",
+  "audit_version": "Mission 001.8 Final Certification Pass",
+  "environment_inspected": "Local Next.js Production Build (Port 3000)",
+  "summary": {
+    "routes_total": 19,
+    "routes_http_200": 19,
+    "titles_valid_format": 19,
+    "titles_duplicate_count": 0,
+    "descriptions_in_range_140_165": 19,
+    "descriptions_duplicate_count": 0,
+    "single_h1_routes": 19,
+    "html_lang_en_routes": 19,
+    "viewport_present_routes": 19,
+    "redirects_total": 10,
+    "redirects_308_valid": 10,
+    "unapproved_keywords_in_schema": 0
+  },
+  "duplicate_titles": {},
+  "duplicate_descriptions": {},
+  "unapproved_in_schema": [],
+  "redirect_audit": [
+    {
+      "source": "/jobs",
+      "expected_target": "/careers",
+      "status_code": 308,
+      "location_header": "/careers",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/job-seekers",
+      "expected_target": "/careers",
+      "status_code": 308,
+      "location_header": "/careers",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/candidates",
+      "expected_target": "/careers",
+      "status_code": 308,
+      "location_header": "/careers",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/staffing",
+      "expected_target": "/employers",
+      "status_code": 308,
+      "location_header": "/employers",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/services",
+      "expected_target": "/divisions",
+      "status_code": 308,
+      "location_header": "/divisions",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/medical-staffing",
+      "expected_target": "/divisions/healthcare",
+      "status_code": 308,
+      "location_header": "/divisions/healthcare",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/industrial-staffing",
+      "expected_target": "/divisions/industrial",
+      "status_code": 308,
+      "location_header": "/divisions/industrial",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/it-staffing",
+      "expected_target": "/divisions/info-tech",
+      "status_code": 308,
+      "location_header": "/divisions/info-tech",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/office-staffing",
+      "expected_target": "/divisions/office",
+      "status_code": 308,
+      "location_header": "/divisions/office",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    },
+    {
+      "source": "/hospitality-staffing",
+      "expected_target": "/divisions/hospitality",
+      "status_code": 308,
+      "location_header": "/divisions/hospitality",
+      "is_308_permanent": true,
+      "correct_target": true,
+      "target_reaches_200": true,
+      "valid": true
+    }
+  ],
+  "robots_and_sitemap": {
+    "robots_txt": {
+      "status": 200,
+      "content_type": "text/plain",
+      "body": "User-Agent: *\nDisallow: /\n\n"
+    },
+    "sitemap_xml": {
+      "status": 200,
+      "content_type": "application/xml",
+      "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n</urlset>\n"
+    }
+  },
+  "route_details": [
+    {
+      "path": "/",
+      "http_status": 200,
+      "title": "Healthcare & Industrial Staffing | Vibrus Group",
+      "title_length": 47,
+      "title_format_valid": true,
+      "description": "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+      "description_length": 156,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Specialized Workforce Staffing Across Healthcare & Industry."
+      ],
+      "h2_count": 6,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Healthcare & Industrial Staffing | Vibrus Group",
+        "description": "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+        "url": "https://vibrusgroup.com",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Healthcare & Industrial Staffing | Vibrus Group",
+        "description": "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 12,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/about",
+      "http_status": 200,
+      "title": "About Our Michigan Leadership | Vibrus Group",
+      "title_length": 44,
+      "title_format_valid": true,
+      "description": "Founded in Warren, Michigan, Vibrus Group is a Women-Owned Minority business led by Paddy and Achla, offering 30+ combined years of staffing excellence.",
+      "description_length": 152,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "About Vibrus Group"
+      ],
+      "h2_count": 3,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "About Our Michigan Leadership | Vibrus Group",
+        "description": "Founded in Warren, Michigan, Vibrus Group is a Women-Owned Minority business led by Paddy and Achla, offering 30+ combined years of staffing excellence.",
+        "url": "https://vibrusgroup.com/about",
+        "image": "https://vibrusgroup.com/images/about-culture-team.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "About Our Michigan Leadership | Vibrus Group",
+        "description": "Founded in Warren, Michigan, Vibrus Group is a Women-Owned Minority business led by Paddy and Achla, offering 30+ combined years of staffing excellence.",
+        "image": "https://vibrusgroup.com/images/about-culture-team.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 4,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/apply",
+      "http_status": 200,
+      "title": "60-Second Express Apply | Vibrus Group",
+      "title_length": 38,
+      "title_format_valid": true,
+      "description": "Complete our fast 60-second express application. Connect with dedicated Michigan recruiters for nursing, allied health, logistics, and skilled trade shifts.",
+      "description_length": 156,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "60-Second Express Apply"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "60-Second Express Apply | Vibrus Group",
+        "description": "Complete our fast 60-second express application. Connect with dedicated Michigan recruiters for nursing, allied health, logistics, and skilled trade shifts.",
+        "url": "https://vibrusgroup.com/apply",
+        "image": "https://vibrusgroup.com/images/candidate-healthcare-professional.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "60-Second Express Apply | Vibrus Group",
+        "description": "Complete our fast 60-second express application. Connect with dedicated Michigan recruiters for nursing, allied health, logistics, and skilled trade shifts.",
+        "image": "https://vibrusgroup.com/images/candidate-healthcare-professional.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/careers",
+      "http_status": 200,
+      "title": "Careers & Placement Support | Vibrus Group",
+      "title_length": 42,
+      "title_format_valid": true,
+      "description": "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and dedicated coordinator care.",
+      "description_length": 160,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Careers at Vibrus Group"
+      ],
+      "h2_count": 4,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Careers & Placement Support | Vibrus Group",
+        "description": "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and dedicated coordinator care.",
+        "url": "https://vibrusgroup.com/careers",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Careers & Placement Support | Vibrus Group",
+        "description": "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and dedicated coordinator care.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/careers/healthcare",
+      "http_status": 200,
+      "title": "Healthcare Nursing & Allied Roles | Vibrus Group",
+      "title_length": 48,
+      "title_format_valid": true,
+      "description": "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Competitive compensation, flexible shifts, and dedicated support.",
+      "description_length": 157,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Your Clinical Passion. Your Terms."
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Healthcare Nursing & Allied Roles | Vibrus Group",
+        "description": "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Competitive compensation, flexible shifts, and dedicated support.",
+        "url": "https://vibrusgroup.com/careers/healthcare",
+        "image": "https://vibrusgroup.com/images/careers-healthcare-nursing.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Healthcare Nursing & Allied Roles | Vibrus Group",
+        "description": "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Competitive compensation, flexible shifts, and dedicated support.",
+        "image": "https://vibrusgroup.com/images/careers-healthcare-nursing.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Careers",
+              "item": "https://vibrusgroup.com/careers"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Healthcare Careers",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/careers/general",
+      "http_status": 200,
+      "title": "Industrial & Commercial Roles | Vibrus Group",
+      "title_length": 44,
+      "title_format_valid": true,
+      "description": "Explore forklift operator, warehousing, assembly, and skilled trade placements across Macomb, Oakland, and Wayne counties with dependable payroll.",
+      "description_length": 146,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "General & Industrial Careers"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Industrial & Commercial Roles | Vibrus Group",
+        "description": "Explore forklift operator, warehousing, assembly, and skilled trade placements across Macomb, Oakland, and Wayne counties with dependable payroll.",
+        "url": "https://vibrusgroup.com/careers/general",
+        "image": "https://vibrusgroup.com/images/industrial-logistics-workplace.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Industrial & Commercial Roles | Vibrus Group",
+        "description": "Explore forklift operator, warehousing, assembly, and skilled trade placements across Macomb, Oakland, and Wayne counties with dependable payroll.",
+        "image": "https://vibrusgroup.com/images/industrial-logistics-workplace.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Careers",
+              "item": "https://vibrusgroup.com/careers"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Industrial & Commercial",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/compliance",
+      "http_status": 200,
+      "title": "Credentialing & Compliance Standards | Vibrus Group",
+      "title_length": 51,
+      "title_format_valid": true,
+      "description": "Our verified clinical credentialing standard includes primary-source license validation, background screenings, and audits for compliant Michigan placements.",
+      "description_length": 157,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Credentialing & Quality Standards"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Credentialing & Compliance Standards | Vibrus Group",
+        "description": "Our verified clinical credentialing standard includes primary-source license validation, background screenings, and audits for compliant Michigan placements.",
+        "url": "https://vibrusgroup.com/compliance",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Credentialing & Compliance Standards | Vibrus Group",
+        "description": "Our verified clinical credentialing standard includes primary-source license validation, background screenings, and audits for compliant Michigan placements.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/contact",
+      "http_status": 200,
+      "title": "Contact Staffing Operations Desk | Vibrus Group",
+      "title_length": 47,
+      "title_format_valid": true,
+      "description": "Connect with Vibrus Group operations headquarters in Warren, Michigan. Reach our 24/7 staffing dispatch line or submit shift staffing requests online.",
+      "description_length": 150,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Contact Warren Headquarters"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Contact Staffing Operations Desk | Vibrus Group",
+        "description": "Connect with Vibrus Group operations headquarters in Warren, Michigan. Reach our 24/7 staffing dispatch line or submit shift staffing requests online.",
+        "url": "https://vibrusgroup.com/contact",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Contact Staffing Operations Desk | Vibrus Group",
+        "description": "Connect with Vibrus Group operations headquarters in Warren, Michigan. Reach our 24/7 staffing dispatch line or submit shift staffing requests online.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/coverage",
+      "http_status": 200,
+      "title": "Michigan Service Areas & Coverage | Vibrus Group",
+      "title_length": 48,
+      "title_format_valid": true,
+      "description": "Serving Oakland, Wayne, and Macomb counties from our Warren headquarters, with workforce coordination expanding statewide across Michigan communities.",
+      "description_length": 150,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Michigan Regional Coverage"
+      ],
+      "h2_count": 2,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Michigan Service Areas & Coverage | Vibrus Group",
+        "description": "Serving Oakland, Wayne, and Macomb counties from our Warren headquarters, with workforce coordination expanding statewide across Michigan communities.",
+        "url": "https://vibrusgroup.com/coverage",
+        "image": "https://vibrusgroup.com/images/coverage-michigan-healthcare.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Michigan Service Areas & Coverage | Vibrus Group",
+        "description": "Serving Oakland, Wayne, and Macomb counties from our Warren headquarters, with workforce coordination expanding statewide across Michigan communities.",
+        "image": "https://vibrusgroup.com/images/coverage-michigan-healthcare.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions",
+      "http_status": 200,
+      "title": "Workforce Solutions & Divisions | Vibrus Group",
+      "title_length": 46,
+      "title_format_valid": true,
+      "description": "Discover specialized workforce staffing divisions including healthcare, industrial, administrative, professional search, engineering, and hospitality.",
+      "description_length": 150,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Specialized Staffing Divisions"
+      ],
+      "h2_count": 6,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Workforce Solutions & Divisions | Vibrus Group",
+        "description": "Discover specialized workforce staffing divisions including healthcare, industrial, administrative, professional search, engineering, and hospitality.",
+        "url": "https://vibrusgroup.com/divisions",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Workforce Solutions & Divisions | Vibrus Group",
+        "description": "Discover specialized workforce staffing divisions including healthcare, industrial, administrative, professional search, engineering, and hospitality.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/healthcare",
+      "http_status": 200,
+      "title": "Clinical Healthcare Staffing | Vibrus Group",
+      "title_length": 43,
+      "title_format_valid": true,
+      "description": "24/7 dispatch of credentialed Registered Nurses, LPNs, CNAs, and Allied Health specialists for Michigan acute care hospitals and long-term care facilities.",
+      "description_length": 155,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Healthcare Staffing & Clinical Care"
+      ],
+      "h2_count": 3,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Clinical Healthcare Staffing | Vibrus Group",
+        "description": "24/7 dispatch of credentialed Registered Nurses, LPNs, CNAs, and Allied Health specialists for Michigan acute care hospitals and long-term care facilities.",
+        "url": "https://vibrusgroup.com/divisions/healthcare",
+        "image": "https://vibrusgroup.com/images/careers-healthcare-nursing.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Clinical Healthcare Staffing | Vibrus Group",
+        "description": "24/7 dispatch of credentialed Registered Nurses, LPNs, CNAs, and Allied Health specialists for Michigan acute care hospitals and long-term care facilities.",
+        "image": "https://vibrusgroup.com/images/careers-healthcare-nursing.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Clinical Healthcare",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/industrial",
+      "http_status": 200,
+      "title": "Industrial & Logistics Staffing | Vibrus Group",
+      "title_length": 46,
+      "title_format_valid": true,
+      "description": "Safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
+      "description_length": 146,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Industrial, Warehouse & Logistics Staffing"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Industrial & Logistics Staffing | Vibrus Group",
+        "description": "Safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
+        "url": "https://vibrusgroup.com/divisions/industrial",
+        "image": "https://vibrusgroup.com/images/industrial-logistics-workplace.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Industrial & Logistics Staffing | Vibrus Group",
+        "description": "Safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
+        "image": "https://vibrusgroup.com/images/industrial-logistics-workplace.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Industrial & Logistics",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/office",
+      "http_status": 200,
+      "title": "Office & Administrative Staffing | Vibrus Group",
+      "title_length": 47,
+      "title_format_valid": true,
+      "description": "Connect with thoroughly vetted administrative assistants, records coordinators, and customer support professionals supporting Michigan commercial offices.",
+      "description_length": 154,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Office & Administrative Staffing"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Office & Administrative Staffing | Vibrus Group",
+        "description": "Connect with thoroughly vetted administrative assistants, records coordinators, and customer support professionals supporting Michigan commercial offices.",
+        "url": "https://vibrusgroup.com/divisions/office",
+        "image": "https://vibrusgroup.com/images/office-professional-collaboration.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Office & Administrative Staffing | Vibrus Group",
+        "description": "Connect with thoroughly vetted administrative assistants, records coordinators, and customer support professionals supporting Michigan commercial offices.",
+        "image": "https://vibrusgroup.com/images/office-professional-collaboration.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Office & Administrative",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/professional",
+      "http_status": 200,
+      "title": "Professional & Executive Search | Vibrus Group",
+      "title_length": 46,
+      "title_format_valid": true,
+      "description": "Targeted recruitment and interim executive placement for finance, clinical nursing directorships, human resources, and operations leadership across Michigan.",
+      "description_length": 157,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Professional & Executive Search"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Professional & Executive Search | Vibrus Group",
+        "description": "Targeted recruitment and interim executive placement for finance, clinical nursing directorships, human resources, and operations leadership across Michigan.",
+        "url": "https://vibrusgroup.com/divisions/professional",
+        "image": "https://vibrusgroup.com/images/professional-executive-consulting.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Professional & Executive Search | Vibrus Group",
+        "description": "Targeted recruitment and interim executive placement for finance, clinical nursing directorships, human resources, and operations leadership across Michigan.",
+        "image": "https://vibrusgroup.com/images/professional-executive-consulting.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Professional & Executive",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/info-tech",
+      "http_status": 200,
+      "title": "IT & Engineering Staffing | Vibrus Group",
+      "title_length": 40,
+      "title_format_valid": true,
+      "description": "Sourcing skilled software developers, cloud engineers, database administrators, and QA specialists for Michigan healthcare and automotive enterprises.",
+      "description_length": 150,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "IT & Engineering Solutions"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "IT & Engineering Staffing | Vibrus Group",
+        "description": "Sourcing skilled software developers, cloud engineers, database administrators, and QA specialists for Michigan healthcare and automotive enterprises.",
+        "url": "https://vibrusgroup.com/divisions/info-tech",
+        "image": "https://vibrusgroup.com/images/technology-engineering-workspace.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "IT & Engineering Staffing | Vibrus Group",
+        "description": "Sourcing skilled software developers, cloud engineers, database administrators, and QA specialists for Michigan healthcare and automotive enterprises.",
+        "image": "https://vibrusgroup.com/images/technology-engineering-workspace.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "IT & Engineering",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/divisions/hospitality",
+      "http_status": 200,
+      "title": "Hospitality & Dietary Staffing | Vibrus Group",
+      "title_length": 45,
+      "title_format_valid": true,
+      "description": "Experienced banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
+      "description_length": 146,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Hospitality & Dining Staffing"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Hospitality & Dietary Staffing | Vibrus Group",
+        "description": "Experienced banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
+        "url": "https://vibrusgroup.com/divisions/hospitality",
+        "image": "https://vibrusgroup.com/images/hospitality-culinary-banquet.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Hospitality & Dietary Staffing | Vibrus Group",
+        "description": "Experienced banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
+        "image": "https://vibrusgroup.com/images/hospitality-culinary-banquet.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 3,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://vibrusgroup.com"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Divisions",
+              "item": "https://vibrusgroup.com/divisions"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Hospitality & Dietary",
+              "item": "https://vibrusgroup.com"
+            }
+          ]
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/employers",
+      "http_status": 200,
+      "title": "Request Staff On-Demand | Vibrus Group",
+      "title_length": 38,
+      "title_format_valid": true,
+      "description": "Request qualified healthcare and industrial personnel on-demand. Experience our 30-minute callback commitment for Michigan hospital and facility managers.",
+      "description_length": 154,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Request Staff On-Demand"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Request Staff On-Demand | Vibrus Group",
+        "description": "Request qualified healthcare and industrial personnel on-demand. Experience our 30-minute callback commitment for Michigan hospital and facility managers.",
+        "url": "https://vibrusgroup.com/employers",
+        "image": "https://vibrusgroup.com/images/healthcare-nurse-director-meeting.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Request Staff On-Demand | Vibrus Group",
+        "description": "Request qualified healthcare and industrial personnel on-demand. Experience our 30-minute callback commitment for Michigan hospital and facility managers.",
+        "image": "https://vibrusgroup.com/images/healthcare-nurse-director-meeting.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/management-review",
+      "http_status": 200,
+      "title": "Management Review Checklist | Vibrus Group",
+      "title_length": 42,
+      "title_format_valid": true,
+      "description": "Required pre-launch checklist and placeholder documentation for management review by executive leadership and operations lead prior to live domain cutover.",
+      "description_length": 155,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Management Review Checklist"
+      ],
+      "h2_count": 6,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Management Review Checklist | Vibrus Group",
+        "description": "Required pre-launch checklist and placeholder documentation for management review by executive leadership and operations lead prior to live domain cutover.",
+        "url": "https://vibrusgroup.com/management-review",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Management Review Checklist | Vibrus Group",
+        "description": "Required pre-launch checklist and placeholder documentation for management review by executive leadership and operations lead prior to live domain cutover.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 2,
+      "images_missing_alt": 0
+    },
+    {
+      "path": "/testimonials",
+      "http_status": 200,
+      "title": "Client & Clinician Feedback | Vibrus Group",
+      "title_length": 42,
+      "title_format_valid": true,
+      "description": "Read testimonials and partnership perspectives from Michigan healthcare facility directors, workforce supervisors, and credentialed placement professionals.",
+      "description_length": 156,
+      "description_range_valid": true,
+      "h1_count": 1,
+      "h1_texts": [
+        "Client & Staff Endorsements"
+      ],
+      "h2_count": 1,
+      "canonical_url": "",
+      "robots_meta": "noindex, nofollow, noarchive, nosnippet",
+      "x_robots_header": "noindex, nofollow, noarchive, nosnippet",
+      "og_tags": {
+        "title": "Client & Clinician Feedback | Vibrus Group",
+        "description": "Read testimonials and partnership perspectives from Michigan healthcare facility directors, workforce supervisors, and credentialed placement professionals.",
+        "url": "https://vibrusgroup.com/testimonials",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg",
+        "type": "website",
+        "site_name": "Vibrus Group"
+      },
+      "twitter_tags": {
+        "card": "summary_large_image",
+        "title": "Client & Clinician Feedback | Vibrus Group",
+        "description": "Read testimonials and partnership perspectives from Michigan healthcare facility directors, workforce supervisors, and credentialed placement professionals.",
+        "image": "https://vibrusgroup.com/images/hero-staffing-coordination.jpg"
+      },
+      "html_lang": "en",
+      "viewport": "width=device-width, initial-scale=1",
+      "json_ld_count": 2,
+      "json_ld": [
+        {
+          "@context": "https://schema.org",
+          "@type": "EmploymentAgency",
+          "@id": "https://vibrusgroup.com/#organization",
+          "name": "Vibrus Group LLC",
+          "legalName": "Vibrus Group LLC",
+          "url": "https://vibrusgroup.com",
+          "logo": "https://vibrusgroup.com/images/vibrus-logo.jpg",
+          "description": "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+          "telephone": "+1-248-443-5100",
+          "faxNumber": "+1-248-443-5115",
+          "founder": [
+            {
+              "@type": "Person",
+              "name": "Paddy"
+            },
+            {
+              "@type": "Person",
+              "name": "Achla"
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "31201 Chicago Road South, Suite B202",
+            "addressLocality": "Warren",
+            "addressRegion": "MI",
+            "postalCode": "48093",
+            "addressCountry": "US"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Macomb County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Oakland County, MI"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Wayne County, MI"
+            },
+            {
+              "@type": "State",
+              "name": "Michigan"
+            }
+          ],
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+1-248-443-5100",
+              "contactType": "24/7 Staffing Dispatch & Customer Service",
+              "availableLanguage": [
+                "English"
+              ],
+              "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+              }
+            }
+          ],
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+              ],
+              "opens": "08:30",
+              "closes": "17:00"
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://vibrusgroup.com/#website",
+          "url": "https://vibrusgroup.com",
+          "name": "Vibrus Group",
+          "description": "24/7 Healthcare Clinical & Industrial Workforce Staffing in Warren, Michigan.",
+          "publisher": {
+            "@id": "https://vibrusgroup.com/#organization"
+          }
+        }
+      ],
+      "images_total": 3,
+      "images_missing_alt": 0
+    }
+  ]
+}

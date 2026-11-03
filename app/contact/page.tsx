@@ -286,10 +286,9 @@ export default function ContactPage() {
                 <Mail className="w-5 h-5 text-cyan-600 shrink-0 mt-0.5" />
                 <div>
                   <div className="text-[11px] text-slate-500 font-semibold uppercase">Operational & Intake Contact</div>
-                  <div className="font-mono text-xs text-slate-900 pt-0.5">
-                    <div>Sharon (Operations Lead): <a href="mailto:sharon@vibrusgroup.com" className="text-blue-700 hover:underline">sharon@vibrusgroup.com</a></div>
-                    <div>General: <a href="mailto:info@vibrusgroup.com" className="text-blue-700 hover:underline">info@vibrusgroup.com</a></div>
-                    <div className="text-[10px] text-slate-500 pt-1 italic">[Future routing to additional team members configurable]</div>
+                  <div className="text-xs text-slate-900 pt-0.5 space-y-1">
+                    <div>Operations & Intake Lead: <a href="mailto:sharon@vibrusgroup.com" className="text-blue-700 font-medium hover:underline">sharon@vibrusgroup.com</a></div>
+                    <div className="text-[11px] text-slate-600">24/7 Dispatch Phone: <span className="font-semibold text-slate-900">{siteConfig.phone}</span></div>
                   </div>
                 </div>
               </div>

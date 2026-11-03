@@ -20,7 +20,7 @@ import { generatePageMetadata } from "@/lib/config/seo";
 export const metadata: Metadata = generatePageMetadata({
   title: "Careers & Placement Support",
   description:
-    "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and 24/7 coordinator care.",
+    "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and dedicated coordinator care.",
   path: "/careers",
   image: "/images/hero-staffing-coordination.jpg",
   imageAlt: "Staffing coordinator guiding candidate through credentialing and career placements in Warren, MI",
@@ -162,7 +162,7 @@ export default function CareersPage() {
             Safety-first manufacturing, automotive assembly, warehousing, logistics, IT, and office support placements throughout Wayne, Oakland, and Macomb.
           </p>
           <ul className="text-xs text-slate-500 space-y-1.5">
-            <li>• Certified Forklift Operators (OSHA-compliant)</li>
+            <li>• Certified Forklift & Material Handling Operators</li>
             <li>• Warehouse Sorters & Quality Control Inspectors</li>
             <li>• Administrative Assistants & IT Helpdesk</li>
           </ul>

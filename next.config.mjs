@@ -9,6 +9,19 @@ const nextConfig = {
   trailingSlash: false,
   async redirects() {
     return [
+      // Primary Legacy Redirects (Mission 001.8 Specification)
+      { source: '/jobs', destination: '/careers', permanent: true },
+      { source: '/job-seekers', destination: '/careers', permanent: true },
+      { source: '/candidates', destination: '/careers', permanent: true },
+      { source: '/staffing', destination: '/employers', permanent: true },
+      { source: '/services', destination: '/divisions', permanent: true },
+      { source: '/medical-staffing', destination: '/divisions/healthcare', permanent: true },
+      { source: '/industrial-staffing', destination: '/divisions/industrial', permanent: true },
+      { source: '/it-staffing', destination: '/divisions/info-tech', permanent: true },
+      { source: '/office-staffing', destination: '/divisions/office', permanent: true },
+      { source: '/hospitality-staffing', destination: '/divisions/hospitality', permanent: true },
+
+      // Historical URL aliases
       {
         source: '/about-us',
         destination: '/about',

@@ -17,9 +17,11 @@ export const metadata: Metadata = {
   description:
     "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
   metadataBase: new URL(siteUrl),
-  alternates: {
-    canonical: siteUrl,
-  },
+  alternates: isProduction
+    ? {
+        canonical: siteUrl,
+      }
+    : undefined,
   robots: isProduction
     ? {
         index: true,

@@ -9,7 +9,7 @@ import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 export const metadata: Metadata = generatePageMetadata({
   title: "Healthcare Nursing & Allied Roles",
   description:
-    "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Transparent compensation, flexible shifts, and 24/7 support.",
+    "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Competitive compensation, flexible shifts, and dedicated support.",
   path: "/careers/healthcare",
   image: "/images/careers-healthcare-nursing.jpg",
   imageAlt: "Registered nurse and clinical specialist reviewing shift schedule at Michigan hospital",

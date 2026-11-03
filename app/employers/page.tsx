@@ -118,7 +118,7 @@ export default function EmployersPage({
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
-                <span><strong>600+ Credentialed Roster:</strong> Pre-screened, 10-panel drug tested, background checked, and oriented to Michigan care standards.</span>
+                <span><strong>600+ Credentialed Roster:</strong> Pre-screened, toxicology tested, background checked, and oriented to Michigan care standards.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />

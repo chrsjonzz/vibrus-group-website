@@ -74,9 +74,9 @@ export const siteConfig: SiteConfig = {
   contacts: {
     primaryRecipient: "sharon@vibrusgroup.com",
     activeRecipients: ["sharon@vibrusgroup.com"],
-    futureConfigurableRecipients: ["Alex@vibrusgroup.com"],
-    generalEmail: "info@vibrusgroup.com",
-    jobsEmail: "jobs@vibrusgroup.com",
+    futureConfigurableRecipients: ["[Configurable upon management authorization]"],
+    generalEmail: "sharon@vibrusgroup.com",
+    jobsEmail: "sharon@vibrusgroup.com",
     deliveryMode: "Server-log recording (Demo mode — actual email transport pending production integration)",
   },
   externalLinks: {

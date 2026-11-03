@@ -20,8 +20,8 @@ export function TrustBar() {
     {
       icon: Building,
       value: "30+ Years",
-      label: "Combined Experience",
-      sublabel: "Leadership & Workforce Heritage",
+      label: "Leadership Heritage",
+      sublabel: "Executive Direction (Paddy & Achla)",
       color: "text-indigo-600 bg-indigo-50/80 border-indigo-200"
     },
     {

@@ -33,9 +33,9 @@ export function WhyVibrusSection() {
     },
     {
       icon: ShieldCheck,
-      title: "6-Point Audit-Ready Credentialing",
+      title: "Comprehensive Credentialing Standards",
       description:
-        "Our comprehensive pre-placement verification includes primary source license checks, 10-panel drug screens, background checks, and orientation verification.",
+        "Our comprehensive pre-placement verification includes primary source license checks, toxicology screening, background checks, and orientation verification.",
       badge: "Quality Assurance"
     },
     {
