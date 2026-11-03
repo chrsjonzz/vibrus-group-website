@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Clock,
   ShieldCheck,
@@ -8,7 +9,9 @@ import {
   Award,
   PhoneCall,
   CheckCircle2,
-  Sparkles
+  Sparkles,
+  Building,
+  ArrowRight
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 
@@ -16,116 +19,117 @@ export function WhyVibrusSection() {
   const differentiators = [
     {
       icon: Clock,
-      title: "24/7 Live Operational Dispatch",
+      title: "24/7 Live Human Operational Dispatch",
       description:
-        "Our staffing coordinators operate around the clock to support healthcare and industrial shift demands, providing immediate phone access and rapid local response.",
-      badge: "24/7 Operations"
+        "Our staffing coordinators operate around the clock in Warren, MI to support urgent shift vacancies with immediate phone access and rapid local coordination.",
+      badge: "24/7 Human Dispatch"
     },
     {
       icon: Users2,
       title: "Continuity of Care Program",
       description:
-        "We strive to assign familiar, recurring professionals who understand your facility's protocols, helping reduce onboarding friction and maintain consistent clinical quality.",
+        "We strive to assign familiar, recurring clinicians who understand your facility's protocols, helping reduce onboarding friction and maintain consistent clinical quality.",
       badge: "Clinical Model"
     },
     {
-      icon: TrendingDown,
-      title: "Workforce Planning & MSP Integration",
-      description:
-        "We assist healthcare systems and industrial facilities in streamlining multiple staffing resources, improving scheduling transparency, and managing overtime labor costs.",
-      badge: "Workforce Management"
-    },
-    {
       icon: ShieldCheck,
-      title: "Pre-Placement Quality Protocols",
+      title: "6-Point Audit-Ready Credentialing",
       description:
-        "Our onboarding procedure includes professional license verification, drug screening, background checks, and skills evaluations tailored to facility requirements.",
-      badge: "Credentialing Quality"
+        "Our comprehensive pre-placement verification includes primary source license checks, 10-panel drug screens, background checks, and orientation verification.",
+      badge: "Quality Assurance"
     },
     {
       icon: Sparkles,
-      title: "Single-Source Efficiency",
+      title: "Single Source — Specialized Solutions",
       description:
-        "Comprehensive workforce solutions that consolidate recruitment, credentialing, shift management, and payroll administration under one accountable Michigan team.",
-      badge: "Operational Advantage"
-    },
-    {
-      icon: PhoneCall,
-      title: "Dedicated Account Coordination",
-      description:
-        "Clients work directly with dedicated staffing coordinators who manage daily requisitions, shift adjustments, and roster confirmations.",
-      badge: "Personal Touch"
+        "We become a seamless, natural extension of your operational team, consolidating recruitment, scheduling, and payroll administration under one accountable Michigan partner.",
+      badge: "Core Philosophy"
     }
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200/80 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto space-y-16">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white relative overflow-hidden">
+      {/* Background Radial Glow */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4">
-          <span className="text-xs font-bold uppercase tracking-wider text-blue-700 bg-blue-50 px-3.5 py-1.5 rounded-full border border-blue-200/80 shadow-xs">
-            The Vibrus Difference
+        <div className="max-w-3xl space-y-4">
+          <span className="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-3.5 py-1.5 rounded-full border border-cyan-500/20 shadow-xs">
+            The Vibrus Operational Advantage
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Why Michigan Facilities Partner with Vibrus Group
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
+            Why Michigan Facilities Rely On Our Team
           </h2>
-          <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            With over 30 years of combined staffing and healthcare expertise among our principals and staff, we deliver dependable staffing solutions backed by responsive personal coordination.
+          <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+            With over 30 years of combined workforce leadership under Paddy and Achla, Vibrus Group delivers personal, accountable staffing solutions designed to protect patient care and operational output.
           </p>
         </div>
 
-        {/* Differentiators Grid with 3D Depth Card Lift */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {differentiators.map((diff, idx) => {
-            const Icon = diff.icon;
-            return (
-              <div
-                key={idx}
-                className="group bg-white p-7 rounded-2xl border border-slate-200/90 shadow-[0_4px_20px_-2px_rgba(15,23,42,0.06)] hover:border-blue-400 hover:shadow-[0_20px_35px_-8px_rgba(15,23,42,0.12)] hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between"
-              >
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <div className="p-3 bg-blue-50 text-blue-700 rounded-xl border border-blue-100 group-hover:scale-105 transition-transform duration-300 shadow-xs">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-700 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors">
-                      {diff.badge}
-                    </span>
-                  </div>
-
-                  <h3 className="text-lg font-bold text-slate-900 leading-snug group-hover:text-blue-700 transition-colors">
-                    {diff.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {diff.description}
-                  </p>
+        {/* Layered Overlapping Editorial Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left: Photographic Visual Frame with Overlapping Badge */}
+          <div className="lg:col-span-5 relative">
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-800 aspect-[4/5] group">
+              <Image
+                src="/images/about-culture-team.jpg"
+                alt="Vibrus Group workforce coordinators and leadership reviewing facility staffing schedules"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
+              
+              <div className="absolute bottom-6 left-6 right-6 p-5 bg-slate-900/95 backdrop-blur-xl rounded-2xl border border-white/15 text-white shadow-panel">
+                <div className="text-xs font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5" />
+                  <span>30+ Years Leadership</span>
                 </div>
-
-                <div className="pt-4 border-t border-slate-100 text-[11px] font-semibold text-blue-700 flex items-center gap-1.5">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  <span>Approved Service Standard</span>
+                <div className="text-base font-bold text-white mt-1">
+                  Executive Direction: Paddy & Achla
+                </div>
+                <div className="text-xs text-slate-300 mt-1">
+                  Dedicated local dispatch and high-touch account management across Michigan.
                 </div>
               </div>
-            );
-          })}
-        </div>
-
-        {/* Standing Slogan Callout */}
-        <div className="bg-gradient-to-r from-vibrus-navy to-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center max-w-4xl mx-auto shadow-2xl relative overflow-hidden border border-slate-800">
-          <div className="absolute inset-0 bg-radial-gradient from-blue-500/10 via-transparent to-transparent pointer-events-none" />
-          <div className="relative z-10 space-y-3">
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">
-              Company Service Principle
-            </span>
-            <blockquote className="text-xl sm:text-2xl font-semibold italic text-slate-100">
-              &ldquo;We deliver what we say, 24 hours a day, 7 days a week!&rdquo;
-            </blockquote>
-            <div className="pt-2 text-xs text-slate-400">
-              Headquartered at 31201 Chicago Road S, Suite B202, Warren, MI 48093 • (248) 443-5100
             </div>
           </div>
+
+          {/* Right: Differentiator Cards */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+            {differentiators.map((diff, idx) => {
+              const Icon = diff.icon;
+              return (
+                <div
+                  key={idx}
+                  className="p-6 rounded-2xl bg-slate-800/80 border border-slate-700/80 hover:border-blue-400/80 transition-all duration-300 shadow-soft-xl flex flex-col justify-between space-y-4 group hover:-translate-y-1"
+                >
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between">
+                      <div className="p-2.5 bg-blue-600/20 text-cyan-300 rounded-xl border border-blue-500/30">
+                        <Icon className="w-5 h-5 text-cyan-400" />
+                      </div>
+                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full bg-slate-900 text-slate-300 border border-slate-700">
+                        {diff.badge}
+                      </span>
+                    </div>
+
+                    <h3 className="text-base font-bold text-white leading-snug group-hover:text-cyan-200 transition-colors">
+                      {diff.title}
+                    </h3>
+
+                    <p className="text-xs text-slate-300 leading-relaxed">
+                      {diff.description}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
         </div>
 
       </div>

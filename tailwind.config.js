@@ -51,6 +51,10 @@ module.exports = {
         'card': '0 4px 20px -2px rgba(11, 25, 44, 0.08)',
         'card-hover': '0 12px 30px -4px rgba(11, 25, 44, 0.16)',
         'elevated': '0 20px 40px -8px rgba(11, 25, 44, 0.22)',
+        'soft-xl': '0 20px 40px -15px rgba(15, 23, 42, 0.12)',
+        'panel': '0 25px 50px -12px rgba(15, 23, 42, 0.25)',
+        'glow-blue': '0 0 50px -10px rgba(59, 130, 246, 0.3)',
+        'glow-cyan': '0 0 50px -10px rgba(6, 182, 212, 0.25)',
       }
     },
   },

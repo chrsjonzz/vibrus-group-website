@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -11,189 +13,172 @@ import {
   Sparkles,
   Building,
   Check,
-  MapPin
+  MapPin,
+  CheckCircle2
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 
 export function SplitHero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-950 via-vibrus-navy to-vibrus-navy-deep text-white pt-10 pb-20 lg:pt-16 lg:pb-28">
-      {/* Background Radial Glows */}
-      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl h-full opacity-20 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:24px_24px]" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-vibrus-navy-deep via-vibrus-navy to-slate-950 text-white pt-12 pb-20 lg:pt-20 lg:pb-32">
+      {/* Background Radial Glow & Grid Mesh */}
+      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-blue-600/15 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:28px_28px]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Header Pill & Headline */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-5">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-800/90 border border-slate-700/80 text-xs font-semibold text-cyan-300 shadow-md backdrop-blur-md">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-            <span>Michigan Workforce Solutions • Warren HQ</span>
-            <span className="text-slate-500">•</span>
-            <span className="text-slate-300">24/7 Operational Dispatch</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
-            Single Source. <br className="hidden sm:inline" />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-amber-300 bg-clip-text text-transparent">
-              Specialized Workforce Solutions.
-            </span>
-          </h1>
-
-          <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
-            Powering Michigan healthcare facilities, logistics centers, and corporate operations with <strong>600+ credentialed professionals</strong>, 24/7 live dispatch, and dedicated local coordination.
-          </p>
+        {/* Top Operational Pill */}
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 text-xs font-semibold text-cyan-300 shadow-md backdrop-blur-md mb-8">
+          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          <span>Warren Headquarters • Tri-County Dispatch Core</span>
+          <span className="text-slate-500 hidden sm:inline">•</span>
+          <span className="text-slate-300 hidden sm:inline">24/7 Human Dispatch</span>
         </div>
 
-        {/* Dual-Funnel Cards Grid with 3D Depth & Visual Imagery */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 max-w-5xl mx-auto">
+        {/* 2-Column Layered Composition */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Card 1: FOR FACILITIES & EMPLOYERS */}
-          <div className="group relative bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-blue-500/30 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-blue-400 hover:shadow-[0_25px_50px_-12px_rgba(37,99,235,0.25)] hover:-translate-y-2">
-            
-            {/* Visual Header Image */}
-            <div className="relative h-48 w-full overflow-hidden bg-slate-800">
-              <Image
-                src="/images/employer-consultation.jpg"
-                alt="Healthcare director and staffing coordinator discussing workforce solutions"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
-              
-              {/* Floating Status Badges */}
-              <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                <span className="px-3 py-1 bg-blue-600/90 text-white rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md border border-blue-400/30">
-                  For Facilities & Employers
+          {/* Left Column: Authoritative Editorial & Dual Action Gateways */}
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-4xl sm:text-6xl lg:text-[4.2rem] font-black tracking-tight text-white leading-[1.08]">
+                Single Source. <br />
+                <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-amber-300 bg-clip-text text-transparent">
+                  Specialized Workforce Solutions.
                 </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-900/80 text-amber-300 rounded-full text-xs font-semibold backdrop-blur-md border border-slate-700/60 shadow-md">
-                  <Clock className="w-3.5 h-3.5 text-amber-400" />
-                  <span>24/7 Live Dispatch</span>
-                </span>
-              </div>
+              </h1>
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl font-normal">
+                Powering Michigan healthcare facilities, logistics warehouses, and corporate enterprises with <strong>600+ credentialed professionals</strong>, reliable 24/7 live human dispatch, and dedicated local coordination from Warren, MI.
+              </p>
             </div>
 
-            {/* Content Body */}
-            <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-              <div className="space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-blue-200 transition-colors">
-                  Need Reliable Staff Coverage Now?
-                </h2>
-
-                <p className="text-sm text-slate-300 leading-relaxed">
-                  Overcome census surges, shift shortages, and specialized skill gaps. Submit an urgent requisition for <strong>any clinical, industrial, or corporate role</strong>.
-                </p>
-
-                <ul className="space-y-2.5 pt-2 text-xs text-slate-300">
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-cyan-400 shrink-0" />
-                    <span>24/7/365 live human dispatch coordinator</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-cyan-400 shrink-0" />
-                    <span>Fully credentialed, background-screened & oriented</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-cyan-400 shrink-0" />
-                    <span>Serving Macomb, Oakland, Wayne & statewide Michigan</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-4 space-y-3">
-                <Link
-                  href="/employers"
-                  className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-xl shadow-lg transition-all text-sm group-hover:shadow-blue-500/25 active:scale-98"
-                >
-                  <FileCheck2 className="w-4 h-4" />
-                  <span>Request Staff On-Demand</span>
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <div className="flex items-center justify-center gap-2 text-xs text-slate-400">
-                  <span>Or speak directly to dispatch:</span>
-                  <a href={`tel:${siteConfig.phoneRaw}`} className="text-amber-400 font-bold hover:underline">
-                    {siteConfig.phone}
-                  </a>
+            {/* Dual Pathways: Facility vs Professional */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+              
+              {/* Pathway 1: Facilities & Employers */}
+              <div className="p-5 rounded-2xl bg-slate-900/90 border border-blue-500/40 shadow-soft-xl hover:border-blue-400 transition-all flex flex-col justify-between space-y-4 group">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-blue-400">
+                      Facilities & Employers
+                    </span>
+                    <span className="text-[10px] font-bold text-amber-300 bg-amber-500/10 px-2 py-0.5 rounded-full border border-amber-500/20">
+                      30-Min Callback
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-blue-200 transition-colors">
+                    Request Staff On-Demand
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Immediate clinical, industrial, or corporate shift coverage across Southeast Michigan.
+                  </p>
+                </div>
+                <div className="space-y-2 pt-2 border-t border-slate-800">
+                  <Link
+                    href="/employers"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 text-white font-bold rounded-xl shadow-md transition-all text-xs"
+                  >
+                    <FileCheck2 className="w-4 h-4" />
+                    <span>Submit Staff Request</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <div className="text-[11px] text-slate-400 text-center">
+                    Dispatch hotline: <a href={`tel:${siteConfig.phoneRaw}`} className="text-amber-400 font-bold hover:underline">{siteConfig.phone}</a>
+                  </div>
                 </div>
               </div>
+
+              {/* Pathway 2: Candidates & Professionals */}
+              <div className="p-5 rounded-2xl bg-slate-900/90 border border-cyan-500/40 shadow-soft-xl hover:border-cyan-400 transition-all flex flex-col justify-between space-y-4 group">
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-cyan-400">
+                      Candidates & Clinicians
+                    </span>
+                    <span className="text-[10px] font-bold text-emerald-300 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                      Fast Intake
+                    </span>
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-cyan-200 transition-colors">
+                    60-Second Express Apply
+                  </h3>
+                  <p className="text-xs text-slate-300 leading-relaxed">
+                    Immediate per-diem and contract placements with dependable weekly direct deposit.
+                  </p>
+                </div>
+                <div className="space-y-2 pt-2 border-t border-slate-800">
+                  <Link
+                    href="/apply"
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl shadow-md transition-all text-xs"
+                  >
+                    <Users2 className="w-4 h-4" />
+                    <span>Join Our Talent Network</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                  <div className="text-[11px] text-slate-400 text-center">
+                    RNs • LPNs • CNAs • Logistics • Office
+                  </div>
+                </div>
+              </div>
+
             </div>
 
+            {/* Verified Trust Strip */}
+            <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-300 pt-2 border-t border-slate-800/80">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>600+ Credentialed Clinicians & Specialists</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Executive Leadership: Paddy & Achla</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                <span>Macomb • Oakland • Wayne Counties</span>
+              </div>
+            </div>
           </div>
 
-          {/* Card 2: FOR CANDIDATES & PROFESSIONALS */}
-          <div className="group relative bg-slate-900/80 backdrop-blur-xl rounded-3xl border border-cyan-500/30 overflow-hidden flex flex-col justify-between transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_25px_50px_-12px_rgba(6,182,212,0.25)] hover:-translate-y-2">
+          {/* Right Column: Multi-Layered Photographic Showcase */}
+          <div className="lg:col-span-5 relative">
             
-            {/* Visual Header Image */}
-            <div className="relative h-48 w-full overflow-hidden bg-slate-800">
+            {/* Primary Framed Photograph */}
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/15 bg-slate-900 group aspect-[4/3] lg:aspect-[5/4]">
               <Image
-                src="/images/candidate-healthcare-professional.jpg"
-                alt="Confident, compassionate registered nurse in a Michigan hospital setting"
+                src="/images/hero-staffing-coordination.jpg"
+                alt="Vibrus Group 24/7 staffing dispatch and regional workforce coordination center in Warren, Michigan"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 1024px) 100vw, 45vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
               
-              {/* Floating Status Badges */}
-              <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                <span className="px-3 py-1 bg-cyan-600/90 text-white rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-md shadow-md border border-cyan-400/30">
-                  For Candidates & Job Seekers
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-900/80 text-emerald-300 rounded-full text-xs font-semibold backdrop-blur-md border border-slate-700/60 shadow-md">
-                  <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-                  <span>Rewarding Roles</span>
-                </span>
+              {/* Floating Top Badge */}
+              <div className="absolute top-4 right-4 px-3.5 py-1.5 bg-slate-950/90 backdrop-blur-md rounded-full border border-white/15 text-xs font-semibold text-emerald-300 flex items-center gap-2 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>24/7 Live Operational Dispatch</span>
               </div>
             </div>
 
-            {/* Content Body */}
-            <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
-              <div className="space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white group-hover:text-cyan-200 transition-colors">
-                  Ready for a Rewarding Career?
-                </h2>
-
-                <p className="text-sm text-slate-300 leading-relaxed">
-                  Explore flexible clinical, industrial, and specialized opportunities. Join a credentialed team with dedicated placement coordination across Michigan.
-                </p>
-
-                <ul className="space-y-2.5 pt-2 text-xs text-slate-300">
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Reliable direct deposit payroll processing</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Per-diem, contract, temp-to-hire & permanent roles</span>
-                  </li>
-                  <li className="flex items-center gap-2.5">
-                    <Check className="w-4 h-4 text-emerald-400 shrink-0" />
-                    <span>Dedicated placement coordinator advocating for you</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-4 space-y-3">
-                <Link
-                  href="/apply"
-                  className="w-full flex items-center justify-center gap-2 py-4 px-6 bg-gradient-to-r from-emerald-600 to-cyan-600 hover:from-emerald-500 hover:to-cyan-500 text-white font-bold rounded-xl shadow-lg transition-all text-sm group-hover:shadow-cyan-500/25 active:scale-98"
-                >
-                  <Users2 className="w-4 h-4" />
-                  <span>60-Second Express Apply</span>
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </Link>
-                <div className="flex items-center justify-center gap-3 text-xs text-slate-400">
-                  <a href={siteConfig.externalLinks.jobsoid} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 underline">
-                    Jobsoid Listings
-                  </a>
-                  <span>•</span>
-                  <a href={siteConfig.externalLinks.indeed} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 underline">
-                    Indeed Profile
-                  </a>
+            {/* Overlapping Floating Metric Card */}
+            <div className="mt-4 sm:-mt-10 sm:ml-6 relative z-20 p-4 sm:p-5 bg-slate-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-panel max-w-sm">
+              <div className="flex items-start gap-3.5">
+                <div className="p-2.5 rounded-xl bg-blue-600/20 border border-blue-400/30 text-cyan-300 shrink-0">
+                  <Building className="w-5 h-5 text-cyan-400" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold uppercase tracking-wider text-amber-400">
+                    Michigan Headquarters
+                  </div>
+                  <div className="text-sm font-bold text-white mt-0.5">
+                    Warren Operational Center
+                  </div>
+                  <div className="text-xs text-slate-300 mt-1">
+                    Serving hospitals, skilled nursing, and industrial hubs statewide.
+                  </div>
                 </div>
               </div>
             </div>
@@ -203,6 +188,9 @@ export function SplitHero() {
         </div>
 
       </div>
+
+      {/* Lower Transition Divider */}
+      <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-b from-transparent to-slate-950/80 pointer-events-none" />
     </section>
   );
 }
