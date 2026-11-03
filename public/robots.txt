@@ -1,4 +1,0 @@
-# Vibrus Group - Internal Review & Staging Environment
-# Disallow all indexing
-User-agent: *
-Disallow: /

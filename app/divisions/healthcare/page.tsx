@@ -17,18 +17,29 @@ import {
 } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Healthcare Solutions — Clinical, Therapy & Living Assistance Staffing",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Clinical Healthcare Staffing",
   description:
-    "Comprehensive healthcare workforce staffing: RN, LPN, CNA, PT, OT, SLP, Allied Health, Private Duty Nursing, and Living Assistance across Michigan. 24/7 Dispatch.",
-};
+    "24/7 dispatch of credentialed Registered Nurses, LPNs, CNAs, and Allied Health specialists for Michigan acute care hospitals and long-term care facilities.",
+  path: "/divisions/healthcare",
+  image: "/images/careers-healthcare-nursing.jpg",
+  imageAlt: "Registered nurses and healthcare coordinators collaborating in clinical facility",
+});
 
 export default function HealthcareDivisionPage() {
   const healthcare = divisionsData.find((d) => d.id === "healthcare")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "Clinical Healthcare" },
+        ]}
+      />
       
       {/* Division Hero with Bright Editorial Design */}
       <section className="bg-gradient-to-br from-blue-50/90 via-white to-slate-50 text-slate-900 rounded-3xl p-8 sm:p-12 lg:p-14 border border-blue-100 shadow-soft-xl relative overflow-hidden">

@@ -3,12 +3,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Stethoscope, CheckCircle2, ArrowRight, ShieldCheck, HeartHandshake } from "lucide-react";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Healthcare Careers (RN, LPN, CNA & Allied) — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Healthcare Nursing & Allied Roles",
   description:
-    "Per-diem and contract opportunities for Registered Nurses, LPNs, CNAs, Physical Therapists, and Allied Health across Michigan.",
-};
+    "Find rewarding nursing and allied health opportunities across Southeast Michigan hospitals. Transparent compensation, flexible shifts, and 24/7 support.",
+  path: "/careers/healthcare",
+  image: "/images/careers-healthcare-nursing.jpg",
+  imageAlt: "Registered nurse and clinical specialist reviewing shift schedule at Michigan hospital",
+});
 
 export default function HealthcareCareersPage() {
   const highlights = [
@@ -21,7 +26,13 @@ export default function HealthcareCareersPage() {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Careers", href: "/careers" },
+          { label: "Healthcare Careers" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-blue-50/80 via-white to-slate-50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-blue-200/80 shadow-soft-xl relative overflow-hidden">

@@ -4,18 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { Utensils, CheckCircle2, ArrowRight, ShieldCheck } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Hospitality & Dietary Staffing — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Hospitality & Dietary Staffing",
   description:
-    "Providing polished banquet servers, culinary chefs, kitchen crews, and healthcare dietary aides across Michigan venues and facilities.",
-};
+    "ServSafe-trained banquet servers, dietary aides, and culinary staff providing polished food service support for Michigan venues and healthcare centers.",
+  path: "/divisions/hospitality",
+  image: "/images/hospitality-culinary-banquet.jpg",
+  imageAlt: "Executive chef and culinary banquet team plating upscale dining service",
+});
 
 export default function HospitalityDivisionPage() {
   const hospitality = divisionsData.find((d) => d.id === "hospitality")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "Hospitality & Dietary" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-rose-50/70 via-white to-slate-50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-rose-200/80 shadow-soft-xl relative overflow-hidden">

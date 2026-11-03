@@ -5,18 +5,29 @@ import Image from "next/image";
 import { Truck, ShieldCheck, Clock, CheckCircle2, FileCheck2, Users2, ArrowRight } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Industrial, Warehouse & Logistics Staffing — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Industrial & Logistics Staffing",
   description:
-    "Powering Michigan manufacturing plants, distribution warehouses, and logistics hubs with certified forklift operators, assemblers, machine trades, and general labor.",
-};
+    "OSHA-safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
+  path: "/divisions/industrial",
+  image: "/images/industrial-logistics-workplace.jpg",
+  imageAlt: "Industrial logistics and warehouse specialists collaborating on Michigan facility floor",
+});
 
 export default function IndustrialDivisionPage() {
   const industrial = divisionsData.find((d) => d.id === "industrial")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "Industrial & Logistics" },
+        ]}
+      />
       
       {/* Hero with Bright Editorial Design */}
       <section className="bg-gradient-to-br from-amber-50/70 via-white to-slate-50 text-slate-900 rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-200/80 shadow-soft-xl relative overflow-hidden">

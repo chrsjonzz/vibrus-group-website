@@ -13,12 +13,16 @@ import {
   ArrowRight
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Compliance & Credentialing Standards — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Credentialing & Compliance Standards",
   description:
-    "Rigorous clinical and industrial credentialing: Primary source license checks, 10-panel drug screens, background checks, and verified employment authorization.",
-};
+    "Our 6-point verification standard includes primary-source license validation, 10-panel drug screens, and OIG checks for audit-ready placement confidence.",
+  path: "/compliance",
+  image: "/images/hero-staffing-coordination.jpg",
+  imageAlt: "Staffing operations and credentialing compliance review at Vibrus Group headquarters",
+});
 
 export default function CompliancePage() {
   const clinicalChecklist = [

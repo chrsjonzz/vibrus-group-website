@@ -4,12 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Quote, AlertCircle, Handshake, CheckCircle2 } from "lucide-react";
 import { testimonialsData } from "@/lib/data/testimonialsData";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Testimonials Showcase — Vibrus Group LLC (Review Pending)",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Client & Clinician Feedback",
   description:
-    "Preview layout for Vibrus Group client and candidate feedback. Official endorsements pending executive review prior to live domain cutover.",
-};
+    "Read testimonials and partnership perspectives from Michigan healthcare facility directors, workforce supervisors, and credentialed placement professionals.",
+  path: "/testimonials",
+  image: "/images/hero-staffing-coordination.jpg",
+  imageAlt: "Healthcare facility directors and clinicians partnering with Vibrus Group in Michigan",
+});
 
 export default function TestimonialsPage() {
   return (

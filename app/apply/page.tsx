@@ -14,12 +14,16 @@ import {
   HeartHandshake
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "60-Second Express Apply — Vibrus Group LLC Careers",
+export const metadata: Metadata = generatePageMetadata({
+  title: "60-Second Express Apply",
   description:
-    "Apply in 60 seconds for Healthcare, Industrial, Office, and Corporate positions with Vibrus Group. Dedicated staffing coordination and career opportunities.",
-};
+    "Complete our fast 60-second express application. Connect with dedicated Michigan recruiters for nursing, allied health, logistics, and skilled trade shifts.",
+  path: "/apply",
+  image: "/images/candidate-healthcare-professional.jpg",
+  imageAlt: "Candidate submitting express job application on mobile and laptop",
+});
 
 export default function ApplyPage({
   searchParams,

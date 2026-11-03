@@ -15,12 +15,16 @@ import {
   Phone
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "About Vibrus Group LLC — Michigan Staffing Leadership",
+export const metadata: Metadata = generatePageMetadata({
+  title: "About Our Michigan Leadership",
   description:
-    "Learn about Vibrus Group LLC, a Women-Owned Minority Small Business Enterprise (WMBE) in Warren, MI. Led by Paddy and Achla, offering 30+ years of healthcare and industrial staffing expertise.",
-};
+    "Founded in Warren, Michigan, Vibrus Group is a Women-Owned Minority business led by Paddy and Achla, offering 30+ combined years of staffing excellence.",
+  path: "/about",
+  image: "/images/about-culture-team.jpg",
+  imageAlt: "Vibrus Group executive leadership and staffing operations team in Warren, MI",
+});
 
 export default function AboutPage() {
   return (

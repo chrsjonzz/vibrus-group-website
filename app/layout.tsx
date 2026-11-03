@@ -5,44 +5,67 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { siteConfig } from "@/lib/config/site";
+import { siteUrl, isProduction, schemaOrgData } from "@/lib/config/seo";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: {
-    default: "Vibrus Group LLC — Healthcare, Industrial & Specialized Staffing Solutions",
-    template: "%s | Vibrus Group LLC",
+    default: "Healthcare & Industrial Staffing | Vibrus Group",
+    template: "%s | Vibrus Group",
   },
   description:
-    "Vibrus Group LLC is a Women-Owned Minority Small Business Enterprise (WMBE) in Warren, Michigan, delivering 24/7 healthcare clinical staffing, industrial & warehouse personnel, and specialized workforce solutions across Oakland, Wayne, Macomb counties and statewide.",
-  keywords: [
-    "Vibrus Group",
-    "healthcare staffing Michigan",
-    "nurse staffing Warren MI",
-    "industrial staffing Oakland County",
-    "warehouse staffing Detroit Wayne County",
-    "Macomb County healthcare staffing",
-    "RN LPN CNA staffing",
-    "WMBE staffing agency Michigan",
-    "24/7 medical staffing",
-    "per diem nursing Michigan"
-  ],
-  authors: [{ name: "Vibrus Group LLC" }],
-  creator: "Vibrus Group LLC",
-  publisher: "Vibrus Group LLC",
+    "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: isProduction
+    ? {
+        index: true,
+        follow: true,
+        googleBot: {
+          index: true,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      }
+    : {
+        index: false,
+        follow: false,
+        noarchive: true,
+        nosnippet: true,
+      },
+  openGraph: {
+    title: "Healthcare & Industrial Staffing | Vibrus Group",
+    description:
+      "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+    url: siteUrl,
+    siteName: "Vibrus Group",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: `${siteUrl}/images/hero-staffing-coordination.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Vibrus Group workforce solutions and staffing coordination in Warren, Michigan",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Healthcare & Industrial Staffing | Vibrus Group",
+    description:
+      "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
+    images: [`${siteUrl}/images/hero-staffing-coordination.jpg`],
+  },
   formatDetection: {
     email: true,
     address: true,
     telephone: true,
-  },
-  metadataBase: new URL("https://vibrusgroup.com"),
-  openGraph: {
-    title: "Vibrus Group LLC — Single Source, Specialized Solutions",
-    description: "24/7 Clinical Healthcare & Industrial Workforce Staffing in Warren, MI. 30-minute callback commitment with 600+ credentialed professionals.",
-    url: "https://vibrusgroup.com",
-    siteName: "Vibrus Group LLC",
-    locale: "en_US",
-    type: "website",
   },
 };
 
@@ -53,6 +76,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
+      <head>
+        {/* Schema.org Organization & WebSite JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaOrgData.organization),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schemaOrgData.website),
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-white text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
         <AnnouncementBar />
         <Navbar />

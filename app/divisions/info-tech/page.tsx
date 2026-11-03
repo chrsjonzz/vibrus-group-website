@@ -4,18 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { Cpu, CheckCircle2, ArrowRight, ShieldCheck } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Information Technology & Engineering Staffing — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "IT & Engineering Staffing",
   description:
-    "Sourcing software engineers, cloud architects, DBAs, QA engineers, and cybersecurity professionals across Michigan.",
-};
+    "Sourcing skilled software developers, cloud engineers, database administrators, and QA specialists for Michigan healthcare and automotive enterprises.",
+  path: "/divisions/info-tech",
+  image: "/images/technology-engineering-workspace.jpg",
+  imageAlt: "Software engineers and IT infrastructure specialists collaborating in tech workspace",
+});
 
 export default function InfoTechDivisionPage() {
   const it = divisionsData.find((d) => d.id === "info-tech")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "IT & Engineering" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-cyan-50/70 via-white to-blue-50/50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-cyan-200/80 shadow-soft-xl relative overflow-hidden">

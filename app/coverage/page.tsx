@@ -5,12 +5,16 @@ import Link from "next/link";
 import { MichiganMap } from "@/components/coverage/MichiganMap";
 import { SearchableFacilityDirectory } from "@/components/coverage/SearchableFacilityDirectory";
 import { MapPin, Clock, Building, ShieldCheck, FileCheck2, Users2 } from "lucide-react";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Michigan Coverage & Facility Locator — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Michigan Service Areas & Coverage",
   description:
-    "Explore Vibrus Group's staffing presence across Oakland, Wayne, and Macomb counties and statewide Michigan. Search supported healthcare facilities and logistics hubs.",
-};
+    "Serving Oakland, Wayne, and Macomb counties from our Warren headquarters, with workforce coordination expanding statewide across Michigan communities.",
+  path: "/coverage",
+  image: "/images/coverage-michigan-healthcare.jpg",
+  imageAlt: "Clinical healthcare facility network map covering Macomb, Oakland, and Wayne counties in Michigan",
+});
 
 export default function CoveragePage() {
   return (

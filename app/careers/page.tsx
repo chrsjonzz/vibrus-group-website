@@ -15,12 +15,16 @@ import {
   Sparkles
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Careers with Vibrus Group LLC — Workforce Opportunities & Placement Support",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Careers & Placement Support",
   description:
-    "Connect with Vibrus Group's network of 600+ credentialed professionals across Michigan healthcare, industrial, and specialized placements.",
-};
+    "Explore flexible per-diem PRN, contract, and direct placement opportunities across Michigan with reliable direct-deposit payroll and 24/7 coordinator care.",
+  path: "/careers",
+  image: "/images/hero-staffing-coordination.jpg",
+  imageAlt: "Staffing coordinator guiding candidate through credentialing and career placements in Warren, MI",
+});
 
 export default function CareersPage() {
   const benefits = [

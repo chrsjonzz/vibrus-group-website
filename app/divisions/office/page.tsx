@@ -4,18 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { Building2, CheckCircle2, FileCheck2, Users2, ArrowRight, ShieldCheck } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Office & Administrative Staffing — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Office & Administrative Staffing",
   description:
-    "Executive assistants, records managers, data entry specialists, and call center support teams across Michigan.",
-};
+    "Connect with thoroughly vetted administrative assistants, records coordinators, and customer support professionals supporting Michigan commercial offices.",
+  path: "/divisions/office",
+  image: "/images/office-professional-collaboration.jpg",
+  imageAlt: "Administrative coordinators and executive support professionals in modern office",
+});
 
 export default function OfficeDivisionPage() {
   const office = divisionsData.find((d) => d.id === "office")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "Office & Administrative" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-slate-100/90 via-white to-blue-50/50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-slate-200/90 shadow-soft-xl relative overflow-hidden">

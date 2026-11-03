@@ -13,12 +13,15 @@ import {
   ArrowRight
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Management Review Checklist — Vibrus Group LLC (Pre-Launch Hold)",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Management Review Checklist",
   description:
-    "Required pre-launch checklist and placeholder documentation for management review by executive leadership (Paddy and Achla) and operations lead (Sharon) prior to live domain cutover.",
-};
+    "Required pre-launch checklist and placeholder documentation for management review by executive leadership and operations lead prior to live domain cutover.",
+  path: "/management-review",
+  noIndex: true,
+});
 
 export default function ManagementReviewPage() {
   const reviewItems = [

@@ -3,12 +3,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Truck, CheckCircle2, ArrowRight, ShieldCheck, Wrench } from "lucide-react";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "General & Industrial Careers — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Industrial & Commercial Roles",
   description:
-    "Manufacturing, warehousing, administrative, IT, and hospitality job opportunities across Michigan. Reliable payroll.",
-};
+    "Explore forklift operator, warehousing, assembly, and skilled trade placements across Macomb, Oakland, and Wayne counties with dependable payroll.",
+  path: "/careers/general",
+  image: "/images/industrial-logistics-workplace.jpg",
+  imageAlt: "Industrial warehouse logistics specialist scanning inventory in modern distribution facility",
+});
 
 export default function GeneralCareersPage() {
   const highlights = [
@@ -23,7 +28,13 @@ export default function GeneralCareersPage() {
   ];
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Careers", href: "/careers" },
+          { label: "Industrial & Commercial" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-amber-50/80 via-white to-slate-50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-amber-200/80 shadow-soft-xl relative overflow-hidden">

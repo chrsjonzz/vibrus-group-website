@@ -4,12 +4,16 @@ import Image from "next/image";
 import { StaffRequestForm } from "@/components/forms/StaffRequestForm";
 import { Phone, Clock, ShieldCheck, Award, CheckCircle2, Building, Upload } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Request Staff On-Demand (24/7) — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Request Staff On-Demand",
   description:
-    "Request clinical healthcare, industrial, warehouse, or specialized workforce staffing on-demand. 30-minute callback commitment. Serving Oakland, Wayne, Macomb & Michigan.",
-};
+    "Request qualified healthcare and industrial personnel on-demand. Experience our 30-minute callback commitment for Michigan hospital and facility managers.",
+  path: "/employers",
+  image: "/images/healthcare-nurse-director-meeting.jpg",
+  imageAlt: "Facility staffing coordinator discussing nurse staffing in modern conference room",
+});
 
 export default function EmployersPage({
   searchParams,

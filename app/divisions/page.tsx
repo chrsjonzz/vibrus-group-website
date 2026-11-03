@@ -18,12 +18,16 @@ import {
 } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
 import { siteConfig } from "@/lib/config/site";
+import { generatePageMetadata } from "@/lib/config/seo";
 
-export const metadata: Metadata = {
-  title: "Specialized Staffing Divisions — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Workforce Solutions & Divisions",
   description:
-    "Explore Vibrus Group's specialized staffing divisions: Healthcare Solutions, Industrial & Logistics, Office Support, Professional Search, IT & Engineering, and Hospitality.",
-};
+    "Discover specialized workforce staffing divisions including healthcare, industrial, administrative, professional search, engineering, and hospitality.",
+  path: "/divisions",
+  image: "/images/hero-staffing-coordination.jpg",
+  imageAlt: "Overview of Vibrus Group workforce staffing divisions across Michigan",
+});
 
 export default function DivisionsPage() {
   const iconMap: Record<string, React.ReactNode> = {

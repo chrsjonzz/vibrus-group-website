@@ -4,18 +4,29 @@ import Link from "next/link";
 import Image from "next/image";
 import { Briefcase, CheckCircle2, ArrowRight, FileCheck2, Users2 } from "lucide-react";
 import { divisionsData } from "@/lib/data/divisionsData";
+import { generatePageMetadata } from "@/lib/config/seo";
+import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
 
-export const metadata: Metadata = {
-  title: "Professional & Executive Search — Vibrus Group LLC",
+export const metadata: Metadata = generatePageMetadata({
+  title: "Professional & Executive Search",
   description:
-    "Direct hire, interim leadership, and corporate search in accounting, human resources, supply chain, and executive management.",
-};
+    "Targeted recruitment and interim executive placement for finance, clinical nursing directorships, human resources, and operations leadership across Michigan.",
+  path: "/divisions/professional",
+  image: "/images/professional-executive-consulting.jpg",
+  imageAlt: "Executive search consultants reviewing corporate placement portfolios in executive office",
+});
 
 export default function ProfessionalDivisionPage() {
   const prof = divisionsData.find((d) => d.id === "professional")!;
 
   return (
-    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+      <Breadcrumbs
+        items={[
+          { label: "Divisions", href: "/divisions" },
+          { label: "Professional & Executive" },
+        ]}
+      />
       
       {/* Bright Editorial Hero */}
       <section className="bg-gradient-to-br from-indigo-50/70 via-white to-slate-50 text-slate-950 rounded-3xl p-8 sm:p-12 lg:p-14 border border-indigo-200/80 shadow-soft-xl relative overflow-hidden">
