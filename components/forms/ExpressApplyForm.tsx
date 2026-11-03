@@ -373,7 +373,7 @@ export function ExpressApplyForm({ initialRole, className = "" }: ExpressApplyFo
           ) : (
             <>
               <Send className="w-4 h-4" />
-              <span>Submit 60-Second Application</span>
+              <span>Start Your 60-Second Application</span>
             </>
           )}
         </button>

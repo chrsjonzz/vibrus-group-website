@@ -84,8 +84,16 @@ export const siteConfig: SiteConfig = {
     indeed: "https://www.indeed.com/cmp/Vibrus-Group",
   },
   navigation: [
-    { name: "Home", href: "/" },
-    { name: "About Us", href: "/about" },
+    { name: "Employers", href: "/employers" },
+    {
+      name: "Candidates",
+      href: "/careers",
+      children: [
+        { name: "60-Second Express Apply", href: "/apply", description: "Rapid direct candidate intake application" },
+        { name: "Healthcare Careers", href: "/careers/healthcare", description: "Clinical nursing, therapy & allied health opportunities" },
+        { name: "General & Industrial Careers", href: "/careers/general", description: "Warehousing, machine trades, administration & IT roles" },
+      ],
+    },
     {
       name: "Divisions",
       href: "/divisions",
@@ -98,17 +106,8 @@ export const siteConfig: SiteConfig = {
         { name: "Hospitality", href: "/divisions/hospitality", description: "Banquets, Front of House, Culinary & Kitchen Staff" },
       ],
     },
-    {
-      name: "Careers",
-      href: "/careers",
-      children: [
-        { name: "Healthcare Careers", href: "/careers/healthcare", description: "Clinical assignments (RN, LPN, CNA, Therapy & Allied)" },
-        { name: "General Careers", href: "/careers/general", description: "Industrial, Administrative, IT & Hospitality placements" },
-        { name: "60-Second Express Apply", href: "/apply", description: "Fast candidate intake application" },
-      ],
-    },
+    { name: "About Vibrus", href: "/about" },
     { name: "Michigan Coverage", href: "/coverage" },
-    { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
   ],
 };

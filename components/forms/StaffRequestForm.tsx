@@ -491,7 +491,7 @@ export function StaffRequestForm({ initialDivision, className = "" }: StaffReque
           ) : (
             <>
               <Send className="w-4 h-4" />
-              <span>Submit Staff Request — 30-Minute Callback Commitment</span>
+              <span>Tell Us What Support You Need — 30-Minute Callback</span>
             </>
           )}
         </button>

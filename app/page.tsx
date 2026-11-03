@@ -1,6 +1,7 @@
 import React from "react";
 import { SplitHero } from "@/components/home/SplitHero";
 import { TrustBar } from "@/components/home/TrustBar";
+import { GuidedExperienceSection } from "@/components/home/GuidedExperienceSection";
 import { DivisionsGrid } from "@/components/home/DivisionsGrid";
 import { MichiganMap } from "@/components/coverage/MichiganMap";
 import { SearchableFacilityDirectory } from "@/components/coverage/SearchableFacilityDirectory";
@@ -13,16 +14,19 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div className="space-y-0">
-      {/* 1. Dual-Funnel Split Hero */}
+      {/* 1. 5-Layer Dual-Funnel Editorial Hero */}
       <SplitHero />
 
       {/* 2. Key Verified Trust Anchors */}
       <TrustBar />
 
-      {/* 3. Specialized Industry Divisions */}
+      {/* 3. Guided Journey: How It Works for Facilities & Candidates */}
+      <GuidedExperienceSection />
+
+      {/* 4. Specialized Industry Divisions */}
       <DivisionsGrid />
 
-      {/* 4. Interactive Michigan Coverage & Facility Locator */}
+      {/* 5. Interactive Michigan Coverage & Facility Locator */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 border-t border-slate-200">
         <div className="max-w-7xl mx-auto space-y-14">
           <div className="text-center max-w-3xl mx-auto space-y-4">
