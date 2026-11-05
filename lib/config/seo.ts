@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 
 export const isProduction =
-  process.env.VERCEL_ENV === "production" ||
-  process.env.NEXT_PUBLIC_APP_ENV === "production";
+  process.env.ENABLE_PRODUCTION_INDEXING === "true" &&
+  (process.env.VERCEL_ENV === "production" ||
+   process.env.NEXT_PUBLIC_APP_ENV === "production");
 
 export const siteUrl = "https://vibrusgroup.com";
 
