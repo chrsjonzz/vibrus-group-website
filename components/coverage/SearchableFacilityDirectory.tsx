@@ -2,13 +2,18 @@
 
 import React, { useState, useMemo } from "react";
 import Link from "next/link";
-import { Search, MapPin, Building, Filter, ArrowRight } from "lucide-react";
+import { Search, MapPin, Building, Filter, ArrowRight, ChevronDown, ChevronUp } from "lucide-react";
 import { michiganFacilities, ServiceAreaListing } from "@/lib/data/facilityDirectoryData";
 
-export function SearchableFacilityDirectory() {
+interface SearchableFacilityDirectoryProps {
+  initialLimit?: number;
+}
+
+export function SearchableFacilityDirectory({ initialLimit }: SearchableFacilityDirectoryProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [selectedCounty, setSelectedCounty] = useState<string>("All");
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const categories = [
     "All",
@@ -36,6 +41,15 @@ export function SearchableFacilityDirectory() {
       return matchesSearch && matchesCategory && matchesCounty;
     });
   }, [searchTerm, selectedCategory, selectedCounty]);
+
+  // If user searched or changed filters, show all matching; otherwise respect initialLimit unless expanded
+  const isFiltering = searchTerm.trim().length > 0 || selectedCategory !== "All" || selectedCounty !== "All";
+  const displayedAreas = useMemo(() => {
+    if (isFiltering || !initialLimit || isExpanded) {
+      return filteredAreas;
+    }
+    return filteredAreas.slice(0, initialLimit);
+  }, [filteredAreas, isFiltering, initialLimit, isExpanded]);
 
   return (
     <div id="facility-locator" className="space-y-6">
@@ -99,7 +113,7 @@ export function SearchableFacilityDirectory() {
       {/* Results Header */}
       <div className="flex items-center justify-between px-1 text-xs text-slate-500">
         <span>
-          Showing <strong>{filteredAreas.length}</strong> active regional coverage sectors
+          Showing <strong>{displayedAreas.length}</strong> of <strong>{filteredAreas.length}</strong> active regional coverage sectors
         </span>
         {searchTerm && (
           <button
@@ -117,7 +131,7 @@ export function SearchableFacilityDirectory() {
 
       {/* Directory Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {filteredAreas.map((area) => (
+        {displayedAreas.map((area) => (
           <div
             key={area.id}
             className="bg-white p-5 rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-card transition-all flex flex-col justify-between space-y-4"
@@ -164,6 +178,35 @@ export function SearchableFacilityDirectory() {
           </div>
         ))}
       </div>
+
+      {/* Expand/Collapse Toggle or Link to Coverage */}
+      {initialLimit && filteredAreas.length > initialLimit && !isFiltering && (
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="w-full sm:w-auto px-6 py-3 bg-white hover:bg-slate-50 border border-slate-300 text-slate-800 font-bold rounded-xl text-xs transition-all shadow-xs flex items-center justify-center gap-2"
+          >
+            {isExpanded ? (
+              <>
+                <ChevronUp className="w-4 h-4 text-blue-600" />
+                <span>Show Fewer Facilities</span>
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4 text-blue-600" />
+                <span>View All {filteredAreas.length} Facilities ({filteredAreas.length - initialLimit} More)</span>
+              </>
+            )}
+          </button>
+          <Link
+            href="/coverage"
+            className="w-full sm:w-auto px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl text-xs transition-all shadow-xs flex items-center justify-center gap-2"
+          >
+            <span>Explore Full Coverage Page</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      )}
 
       <div className="p-3 bg-slate-50 border border-slate-200 rounded-xl text-center text-xs text-slate-500">
         [Note: Specific named healthcare facility clients and commercial accounts are held for management review prior to public release.]

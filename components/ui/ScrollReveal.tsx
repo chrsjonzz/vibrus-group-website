@@ -15,13 +15,13 @@ export function ScrollReveal({ children, className, delay = 0 }: ScrollRevealPro
   return (
     <motion.div
       className={className}
-      initial={prefersReducedMotion ? false : { opacity: 0, y: 24, filter: "blur(4px)" }}
+      initial={prefersReducedMotion ? false : { opacity: 0, y: 20, filter: "blur(4px)" }}
       whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0, filter: "blur(0px)" }}
-      viewport={{ once: true, amount: 0.14, margin: "0px 0px -6% 0px" }}
+      viewport={{ once: true, amount: "some", margin: "0px 0px -40px 0px" }}
       transition={
         prefersReducedMotion
           ? undefined
-          : { duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }
+          : { duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }
       }
     >
       {children}
