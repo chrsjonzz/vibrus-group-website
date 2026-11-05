@@ -87,7 +87,7 @@ export default function HealthcareDivisionPage() {
           <div className="lg:col-span-5 relative group">
             <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group-hover:scale-[1.02] transition-transform duration-500 bg-white">
               <Image
-                src="/images/clinical-healthcare-nursing.jpg"
+                src="/images/vibrus-healthcare-collaboration-v2.png"
                 alt="Compassionate, professional clinical nurse collaborating with medical staff in hospital setting"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

@@ -172,7 +172,7 @@ export function GuidedExperienceSection() {
               How Vibrus Works For You
             </h2>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Clear, human-centered workforce coordination. Choose your path below to see exactly how our 24/7 Warren team delivers dependable support from intake to assignment.
+              A clear path from first conversation to next step. Choose the experience that fits you and explore how Vibrus coordinates support across Michigan.
             </p>
           </div>
 
@@ -218,6 +218,15 @@ export function GuidedExperienceSection() {
                 <div
                   key={idx}
                   onClick={() => setActiveStepIndex(idx)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setActiveStepIndex(idx);
+                    }
+                  }}
+                  aria-pressed={isSelected}
                   className={`cursor-pointer rounded-2xl p-6 sm:p-7 border transition-all duration-300 text-left relative overflow-hidden group ${
                     isSelected
                       ? activeAudience === "facilities"
@@ -277,9 +286,15 @@ export function GuidedExperienceSection() {
                         {stepItem.title}
                       </h3>
 
-                      <p className="text-sm text-slate-600 leading-relaxed">
-                        {stepItem.description}
-                      </p>
+                      {isSelected ? (
+                        <p className="text-sm text-slate-600 leading-relaxed">
+                          {stepItem.description}
+                        </p>
+                      ) : (
+                        <p className="text-xs sm:text-sm text-slate-500 leading-relaxed line-clamp-1">
+                          {stepItem.subtitle}
+                        </p>
+                      )}
 
                       {/* Expandable Highlight Chips on Selection */}
                       {isSelected && (

@@ -1,26 +1,27 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
-  FileCheck2,
-  Users2,
-  Clock,
-  ShieldCheck,
-  ArrowRight,
-  Phone,
   Building,
   CheckCircle2,
-  MapPin,
-  Sparkles,
-  ExternalLink
 } from "lucide-react";
-import { siteConfig } from "@/lib/config/site";
 
 export function SplitHero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#F0F7FF] via-[#F8FAFC] to-[#FFFFFF] text-slate-900 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200/80">
+      {/* Wide Michigan-inspired hero atmosphere behind the editorial layout */}
+      <Image
+        src="/images/vibrus-hero-background-lakeshore-v1.png"
+        alt=""
+        fill
+        sizes="100vw"
+        aria-hidden="true"
+        className="pointer-events-none object-cover object-center opacity-35"
+        priority
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/85 via-white/68 to-white/35 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F0F7FF]/45 via-transparent to-white/70 pointer-events-none" />
       {/* Subtle Luminous Ambient Glows */}
       <div className="absolute top-0 left-1/4 w-[650px] h-[650px] bg-blue-400/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-1/4 w-[550px] h-[550px] bg-cyan-400/10 rounded-full blur-[130px] pointer-events-none" />
@@ -37,10 +38,6 @@ export function SplitHero() {
             <span className="text-slate-600 hidden sm:inline">24/7 Human Dispatch</span>
           </div>
 
-          <div className="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-50/90 border border-amber-200/80 text-xs font-semibold text-amber-900 shadow-2xs">
-            <Clock className="w-3.5 h-3.5 text-amber-600" />
-            <span>Facility Callback Commitment: 30 Minutes</span>
-          </div>
         </div>
 
         {/* 2-Column Asymmetric Editorial Layout */}
@@ -61,7 +58,7 @@ export function SplitHero() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
-                Connecting Michigan hospitals, skilled nursing centers, automotive manufacturing plants, and logistics distribution hubs with <strong>600+ credentialed professionals</strong>, reliable 24/7 human dispatch, and dedicated workforce coordination statewide from our Warren headquarters.
+                Connecting Michigan hospitals, skilled nursing centers, industrial teams, and logistics operations with <strong>600+ credentialed professionals</strong>, reliable 24/7 human dispatch, and dedicated workforce coordination statewide from our Warren headquarters.
               </p>
             </div>
 
@@ -77,7 +74,7 @@ export function SplitHero() {
               </div>
               <div className="flex items-center gap-2 bg-white/80 p-2.5 rounded-xl border border-slate-200/70 shadow-2xs">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Tri-County Roots • Statewide Reach</span>
+                <span>Michiganwide Workforce Coverage</span>
               </div>
             </div>
           </div>
@@ -89,7 +86,7 @@ export function SplitHero() {
               {/* Primary Image: 24/7 Coordination Hub */}
               <div className="relative h-72 sm:h-96 w-full rounded-3xl overflow-hidden shadow-soft-xl border border-slate-200/80 bg-white group">
                 <Image
-                  src="/images/hero-staffing-coordination.jpg"
+                  src="/images/vibrus-home-hero-wide-v3.png"
                   alt="Vibrus Group staffing operations hub coordinating Michiganwide workforce deployments"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
@@ -99,36 +96,64 @@ export function SplitHero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent pointer-events-none" />
                 
                 {/* Desktop/Tablet Inset Overlay Card (Deliberately positioned at bottom-right, zero collision) */}
-                <div className="hidden sm:block absolute bottom-3 right-3 max-w-[300px] p-3.5 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 text-slate-900 shadow-elevated z-10">
-                  <div className="flex items-center justify-between gap-1.5">
-                    <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                      <Building className="w-3.5 h-3.5 text-blue-700 shrink-0" />
-                      <span>Michiganwide staffing coverage</span>
-                    </span>
-                    <span className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-semibold shrink-0">
-                      Live
-                    </span>
+                <div className="hidden sm:block absolute bottom-3 right-3 w-[min(300px,calc(100%-1.5rem))] p-3.5 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 text-slate-900 shadow-elevated z-10">
+                  <div className="flex items-start gap-2.5">
+                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700 border border-blue-100">
+                      <Building className="w-3.5 h-3.5" />
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center justify-between gap-2">
+                        <span className="min-w-0 text-[11px] font-extrabold uppercase tracking-[0.08em] leading-4 text-blue-800">
+                          Michiganwide coverage
+                        </span>
+                        <span className="shrink-0 rounded border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.08em] text-emerald-800">
+                          Live
+                        </span>
+                      </div>
+                      <p className="mt-1 text-[11px] leading-4 text-slate-600">
+                        Warren headquarters · serving facilities across Michigan
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-[11px] text-slate-600 mt-1 leading-snug">
-                    Warren headquarters • Serving facilities and professionals across Michigan
-                  </p>
+                </div>
+              </div>
+
+              {/* Secondary editorial image layer: a compact people-first mobile moment */}
+              <div className="hidden sm:block absolute -bottom-5 left-4 z-20 w-36 md:w-40 rounded-2xl border-4 border-white bg-white shadow-[0_18px_40px_-12px_rgba(15,23,42,0.35)] rotate-[-3deg] transition-transform duration-500 hover:rotate-0 hover:-translate-y-1">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-slate-100">
+                  <Image
+                    src="/images/vibrus-candidate-mobile-v2.png"
+                    alt="Vibrus candidate reviewing a mobile work schedule"
+                    fill
+                    sizes="160px"
+                    className="object-cover object-center"
+                  />
+                  <div className="absolute inset-x-2 bottom-2 rounded-lg bg-slate-950/75 px-2.5 py-2 text-[10px] font-bold leading-tight text-white backdrop-blur-sm">
+                    People-first coordination
+                  </div>
                 </div>
               </div>
 
               {/* Mobile Dedicated Card: Positioned below the image on mobile to eliminate clipping and facial overlap */}
               <div className="sm:hidden mt-3 p-3.5 bg-white rounded-2xl border border-slate-200 text-slate-900 shadow-soft-md">
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
-                    <Building className="w-3.5 h-3.5 text-blue-700 shrink-0" />
-                    <span>Michiganwide staffing coverage</span>
-                  </span>
-                  <span className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-semibold shrink-0">
-                    Live
-                  </span>
+                <div className="flex items-start gap-2.5">
+                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700 border border-blue-100">
+                    <Building className="w-3.5 h-3.5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <span className="min-w-0 text-[11px] font-extrabold uppercase tracking-[0.08em] leading-4 text-blue-800">
+                        Michiganwide coverage
+                      </span>
+                      <span className="shrink-0 rounded border border-emerald-200 bg-emerald-50 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.08em] text-emerald-800">
+                        Live
+                      </span>
+                    </div>
+                    <p className="mt-1 text-[11px] leading-4 text-slate-600">
+                      Warren headquarters · serving facilities across Michigan
+                    </p>
+                  </div>
                 </div>
-                <p className="text-[11px] text-slate-600 mt-1 leading-snug">
-                  Warren headquarters • Serving facilities and professionals across Michigan
-                </p>
               </div>
 
               {/* Floating Accent Badge: 600+ Credentialed Roster (Anchored safely at top-right on tablet/desktop) */}
@@ -140,103 +165,6 @@ export function SplitHero() {
             </div>
           </div>
 
-        </div>
-
-        {/* Foreground Dual-Journey Action Console (Bright, Spacious, High-Contrast) */}
-        <div className="pt-2">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-soft-xl grid grid-cols-1 lg:grid-cols-2 gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
-            
-            {/* JOURNEY 1: Facilities & Employers */}
-            <div className="space-y-4 lg:pr-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-blue-50 text-blue-700 border border-blue-200/80 shadow-2xs">
-                    <FileCheck2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-blue-700 block">
-                      For Facilities & Employers
-                    </span>
-                    <h3 className="text-xl font-bold text-slate-950">
-                      Request Staff On-Demand
-                    </h3>
-                  </div>
-                </div>
-                <span className="text-[11px] font-bold text-amber-900 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200">
-                  30-Min Callback
-                </span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Fulfill clinical nursing, therapy, industrial, logistics, and specialized workforce requisitions. Available 24 hours a day with verified credentials and rapid operational dispatch.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-3 pt-1">
-                <Link
-                  href="/employers"
-                  className="px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 active:scale-95"
-                >
-                  <FileCheck2 className="w-4 h-4" />
-                  <span>Request Staff On-Demand</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-                <a
-                  href={`tel:${siteConfig.phoneRaw}`}
-                  className="px-4 py-3.5 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 font-semibold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 active:scale-95"
-                >
-                  <Phone className="w-3.5 h-3.5 text-blue-600" />
-                  <span>{siteConfig.phone}</span>
-                </a>
-              </div>
-            </div>
-
-            {/* JOURNEY 2: Candidates & Job Seekers */}
-            <div className="space-y-4 pt-6 lg:pt-0 lg:pl-6">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-700 border border-emerald-200/80 shadow-2xs">
-                    <Users2 className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-emerald-700 block">
-                      For Candidates & Clinicians
-                    </span>
-                    <h3 className="text-xl font-bold text-slate-950">
-                      60-Second Express Apply
-                    </h3>
-                  </div>
-                </div>
-                <span className="text-[11px] font-bold text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-                  Fast Intake
-                </span>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Connect with our Warren recruiting team for per-diem PRN shifts, local contract assignments, and direct placements across Michigan with competitive compensation.
-              </p>
-
-              <div className="flex flex-wrap items-center gap-3 pt-1">
-                <Link
-                  href="/apply"
-                  className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center gap-2 active:scale-95"
-                >
-                  <Users2 className="w-4 h-4" />
-                  <span>60-Second Express Apply</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-                <a
-                  href={siteConfig.externalLinks.jobsoid}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-3.5 bg-slate-50 hover:bg-slate-100 text-slate-800 border border-slate-200 font-semibold text-xs sm:text-sm rounded-xl transition-all flex items-center gap-2 active:scale-95"
-                >
-                  <span>Jobsoid Openings</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
-                </a>
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Safety-screened forklift operators, warehouse teams, and assembly talent deployed swiftly across Macomb, Wayne, and Oakland manufacturing centers.",
   path: "/divisions/industrial",
-  image: "/images/industrial-logistics-workplace.jpg",
+  image: "/images/vibrus-industrial-team-v2.png",
   imageAlt: "Industrial logistics and warehouse specialists collaborating on Michigan facility floor",
 });
 
@@ -69,7 +69,7 @@ export default function IndustrialDivisionPage() {
           <div className="lg:col-span-5 relative group">
             <div className="relative h-72 sm:h-84 w-full rounded-2xl overflow-hidden shadow-soft-xl border border-slate-200/80 group-hover:scale-[1.02] transition-transform duration-500 bg-white">
               <Image
-                src="/images/industrial-logistics-workplace.jpg"
+                src="/images/vibrus-industrial-team-v2.png"
                 alt="Professional logistics warehouse crew performing safe pallet scanning in modern Michigan distribution center"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

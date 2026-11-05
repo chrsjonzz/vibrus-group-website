@@ -22,7 +22,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Complete our fast 60-second express application. Connect with dedicated Michigan recruiters for nursing, allied health, logistics, and skilled trade shifts.",
   path: "/apply",
-  image: "/images/candidate-healthcare-professional.jpg",
+  image: "/images/vibrus-candidate-mobile-v2.png",
   imageAlt: "Candidate submitting express job application on mobile and laptop",
 });
 
@@ -62,7 +62,7 @@ export default function ApplyPage({
           {/* Visual Candidate Showcase Card */}
           <div className="relative h-48 w-full rounded-2xl overflow-hidden shadow-lg border border-slate-200">
             <Image
-              src="/images/candidate-healthcare-professional.jpg"
+              src="/images/vibrus-candidate-mobile-v2.png"
               alt="Confident clinician and professional ready for career placement"
               fill
               sizes="(max-width: 1024px) 100vw, 33vw"

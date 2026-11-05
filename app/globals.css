@@ -8,12 +8,19 @@
   }
   
   html {
+    color-scheme: light;
     scroll-behavior: smooth;
     color: #0F172A;
     background-color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  body {
+    color-scheme: light;
+    background-color: #FFFFFF;
+    color: #0F172A;
   }
 
   ::selection {

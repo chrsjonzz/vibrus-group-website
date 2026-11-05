@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `${siteUrl}/images/hero-staffing-coordination.jpg`,
+        url: `${siteUrl}/images/vibrus-home-hero-wide-v3.png`,
         width: 1200,
         height: 630,
         alt: "Vibrus Group workforce solutions and staffing coordination in Warren, Michigan",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     title: "Healthcare & Industrial Staffing | Vibrus Group",
     description:
       "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
-    images: [`${siteUrl}/images/hero-staffing-coordination.jpg`],
+    images: [`${siteUrl}/images/vibrus-home-hero-wide-v3.png`],
   },
   formatDetection: {
     email: true,
