@@ -21,14 +21,14 @@ export function TrustBar() {
       icon: Building,
       value: "30+ Years",
       label: "Leadership Heritage",
-      sublabel: "Executive Direction (Paddy & Achla)",
+      sublabel: "Decades of Staffing Excellence",
       color: "text-indigo-600 bg-indigo-50/80 border-indigo-200"
     },
     {
       icon: MapPin,
-      value: "Tri-County +",
-      label: "Macomb • Oakland • Wayne",
-      sublabel: "Expanding Across Michigan & US",
+      value: "Michiganwide",
+      label: "Workforce Coverage",
+      sublabel: "Warren HQ • Statewide Reach",
       color: "text-cyan-600 bg-cyan-50/80 border-cyan-200"
     },
     {

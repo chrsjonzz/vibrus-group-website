@@ -19,9 +19,9 @@ export function AnnouncementBar() {
             <span>600+ Credentialed Professionals</span>
           </span>
           <span className="hidden lg:inline text-slate-600" aria-hidden="true">•</span>
-          <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-400">
-            <MapPin className="w-3.5 h-3.5 text-amber-400" aria-hidden="true" />
-            <span>Tri-County (Macomb • Oakland • Wayne) & Statewide</span>
+          <span className="hidden lg:inline-flex items-center gap-1.5 text-slate-300">
+            <MapPin className="w-3.5 h-3.5 text-cyan-400" aria-hidden="true" />
+            <span>Michiganwide Workforce Coverage • Warren HQ</span>
           </span>
         </div>
 

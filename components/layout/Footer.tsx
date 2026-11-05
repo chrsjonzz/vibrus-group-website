@@ -46,20 +46,20 @@ export function Footer() {
           {/* Brand & HQ Column */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-lg overflow-hidden border border-slate-700 bg-white p-1">
+              <div className="relative h-12 w-32 p-1.5 rounded-xl bg-white/95 border border-slate-700/80 shadow-sm flex items-center justify-center">
                 <Image
-                  src="/images/vibrus-logo.jpg"
-                  alt="Vibrus Group Official Logo"
-                  width={44}
+                  src="/images/vibrus-logo-2x.png"
+                  alt="Vibrus Group LLC Official Logo"
+                  width={120}
                   height={44}
-                  className="object-contain"
+                  className="h-full w-auto object-contain"
                 />
               </div>
-              <div>
-                <span className="text-xl font-bold tracking-tight text-white block">
+              <div className="border-l border-slate-700 pl-3">
+                <span className="text-lg font-bold tracking-tight text-white block">
                   VIBRUS GROUP LLC
                 </span>
-                <span className="text-xs text-amber-400 font-semibold">
+                <span className="text-xs text-amber-400 font-semibold block">
                   {siteConfig.badges.wmbe}
                 </span>
               </div>
@@ -67,8 +67,8 @@ export function Footer() {
 
             <p className="text-sm text-slate-400 leading-relaxed">
               Vibrus Group is a premier staffing and workforce solutions partner headquartered in Warren, Michigan.
-              Led by executive leadership Paddy and Achla, our principals and team bring over 30 years of combined
-              experience providing reliable clinical, industrial, and specialized talent across Michigan and nationwide.
+              Our principals and staffing coordinators bring over 30 years of combined experience providing reliable
+              clinical, industrial, and specialized talent across Michigan and nationwide.
             </p>
 
             <div className="space-y-2 pt-2 text-xs text-slate-300">

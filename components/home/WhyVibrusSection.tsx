@@ -64,7 +64,7 @@ export function WhyVibrusSection() {
             Why Michigan Facilities Rely On Our Team
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
-            With over 30 years of combined workforce leadership under Paddy and Achla, Vibrus Group delivers personal, accountable staffing solutions designed to protect patient care and operational output.
+            With over 30 years of combined workforce leadership, Vibrus Group delivers personal, accountable staffing solutions designed to protect patient care and operational output.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export function WhyVibrusSection() {
                   <span>30+ Years Leadership</span>
                 </div>
                 <div className="text-base font-bold text-white mt-1">
-                  Executive Direction: Paddy & Achla
+                  Executive Direction & Quality Oversight
                 </div>
                 <div className="text-xs text-slate-300 mt-1">
                   Dedicated local dispatch and high-touch account management across Michigan.

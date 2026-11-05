@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import {
   FileCheck2,
   Clock,
-  Upload,
   CheckCircle2,
   AlertCircle,
   Building,
@@ -17,6 +16,7 @@ import {
   ShieldCheck
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
+import { AdvancedDocumentUpload, UploadFileItem } from "./AdvancedDocumentUpload";
 
 interface StaffRequestFormProps {
   initialDivision?: string;
@@ -49,32 +49,13 @@ export function StaffRequestForm({ initialDivision, className = "" }: StaffReque
     notes: "",
   });
 
-  const [file, setFile] = useState<File | null>(null);
+  const [attachedFiles, setAttachedFiles] = useState<UploadFileItem[]>([]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      const selected = e.target.files[0];
-      if (selected.size > MAX_SIZE_BYTES) {
-        setErrorMessage(`Selected file is too large (${(selected.size / (1024 * 1024)).toFixed(2)} MB). Max limit is 5 MB.`);
-        setFile(null);
-        return;
-      }
-      const ext = selected.name.substring(selected.name.lastIndexOf(".")).toLowerCase();
-      if (!ALLOWED_EXTS.includes(ext)) {
-        setErrorMessage(`Unsupported file format (${ext}). Allowed formats: PDF, Word (.doc, .docx), and plain text (.txt).`);
-        setFile(null);
-        return;
-      }
-      setErrorMessage("");
-      setFile(selected);
-    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -92,8 +73,11 @@ export function StaffRequestForm({ initialDivision, className = "" }: StaffReque
         data.set("positionNeeded", formData.customPosition);
       }
 
-      if (file) {
-        data.append("requisitionFile", file);
+      attachedFiles.forEach((item) => {
+        data.append("files", item.file);
+      });
+      if (attachedFiles.length > 0) {
+        data.append("requisitionFile", attachedFiles[0].file);
       }
 
       const res = await fetch("/api/request-staff", {
@@ -149,7 +133,7 @@ export function StaffRequestForm({ initialDivision, className = "" }: StaffReque
         <button
           onClick={() => {
             setSubmitted(false);
-            setFile(null);
+            setAttachedFiles([]);
           }}
           className="mt-4 px-6 py-2.5 text-xs font-bold text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-lg transition-colors"
         >
@@ -433,33 +417,14 @@ export function StaffRequestForm({ initialDivision, className = "" }: StaffReque
           </div>
         </div>
 
-        {/* Requisition Document Upload (Secure Non-Public Storage) */}
-        <div>
-          <label htmlFor="requisitionFileInput" className="block text-xs font-semibold text-slate-700 mb-1">
-            Attach Requisition, Schedule, or Job Order (Optional, Max 5 MB)
-          </label>
-          <div className="border border-dashed border-slate-300 rounded-xl p-4 text-center hover:bg-slate-50 transition-colors">
-            <input
-              id="requisitionFileInput"
-              type="file"
-              onChange={handleFileChange}
-              accept=".pdf,.doc,.docx,.txt"
-              className="hidden"
-            />
-            <label htmlFor="requisitionFileInput" className="cursor-pointer flex flex-col items-center gap-1.5">
-              <Upload className="w-5 h-5 text-blue-600" />
-              <span className="text-xs font-semibold text-slate-800">
-                {file ? file.name : "Click to attach document (PDF, Word, or TXT)"}
-              </span>
-              <span className="text-[11px] text-slate-400">
-                {file ? `${(file.size / 1024).toFixed(1)} KB selected` : "Secure local demo upload (Max 5 MB)"}
-              </span>
-            </label>
-          </div>
-          <span className="text-[11px] text-slate-400 mt-1 block">
-            Demo notice: Stored in an unserved private directory on this PC. Cloud storage requires management approval prior to launch.
-          </span>
-        </div>
+        {/* Advanced Multi-File & Folder Document Upload with In-Page Preview */}
+        <AdvancedDocumentUpload
+          files={attachedFiles}
+          onFilesChange={setAttachedFiles}
+          label="Attach Requisition, Schedule, or Job Order (Optional)"
+          sublabel="Select multiple files or an entire folder of facility requirements (PDF, Word, Text, or Images). Max 10 MB per file, 40 MB total."
+          idPrefix="staff-req"
+        />
 
         {/* Additional Notes */}
         <div>

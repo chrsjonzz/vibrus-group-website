@@ -32,7 +32,7 @@ export function SplitHero() {
         <div className="flex flex-wrap items-center gap-3">
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/90 border border-blue-200/80 text-xs font-semibold text-blue-900 shadow-xs backdrop-blur-md">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span>Warren Headquarters • Tri-County Dispatch Core</span>
+            <span>Warren Headquarters • Michiganwide Workforce Coverage</span>
             <span className="text-slate-300 hidden sm:inline">•</span>
             <span className="text-slate-600 hidden sm:inline">24/7 Human Dispatch</span>
           </div>
@@ -61,7 +61,7 @@ export function SplitHero() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl">
-                Connecting Michigan hospitals, skilled nursing centers, automotive manufacturing plants, and logistics distribution hubs with <strong>600+ credentialed professionals</strong>, reliable 24/7 human dispatch, and dedicated local coordination from Warren, MI.
+                Connecting Michigan hospitals, skilled nursing centers, automotive manufacturing plants, and logistics distribution hubs with <strong>600+ credentialed professionals</strong>, reliable 24/7 human dispatch, and dedicated workforce coordination statewide from our Warren headquarters.
               </p>
             </div>
 
@@ -77,57 +77,64 @@ export function SplitHero() {
               </div>
               <div className="flex items-center gap-2 bg-white/80 p-2.5 rounded-xl border border-slate-200/70 shadow-2xs">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>Macomb, Oakland & Wayne</span>
+                <span>Tri-County Roots • Statewide Reach</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Layered Photographic Composition (Soft Wash & Clean Borders) */}
+          {/* Right Column: Layered Photographic Composition (Responsive & Collision-Free) */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-md lg:max-w-none">
               
               {/* Primary Image: 24/7 Coordination Hub */}
-              <div className="relative h-80 sm:h-96 w-full rounded-3xl overflow-hidden shadow-soft-xl border border-slate-200/80 bg-white group">
+              <div className="relative h-72 sm:h-96 w-full rounded-3xl overflow-hidden shadow-soft-xl border border-slate-200/80 bg-white group">
                 <Image
                   src="/images/hero-staffing-coordination.jpg"
-                  alt="Vibrus Group 24/7 staffing dispatch and workforce coordination team in Warren, Michigan"
+                  alt="Vibrus Group staffing operations hub coordinating Michiganwide workforce deployments"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent pointer-events-none" />
                 
-                {/* Clean Floating Caption */}
-                <div className="absolute bottom-4 left-4 right-4 p-3.5 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/80 text-slate-900 text-xs shadow-md">
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-slate-900 flex items-center gap-1.5">
-                      <Building className="w-3.5 h-3.5 text-blue-700" />
-                      <span>Warren, MI Headquarters</span>
+                {/* Desktop/Tablet Inset Overlay Card (Deliberately positioned at bottom-right, zero collision) */}
+                <div className="hidden sm:block absolute bottom-3 right-3 max-w-[300px] p-3.5 bg-white/95 backdrop-blur-md rounded-2xl border border-slate-200/90 text-slate-900 shadow-elevated z-10">
+                  <div className="flex items-center justify-between gap-1.5">
+                    <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                      <Building className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                      <span>Michiganwide staffing coverage</span>
                     </span>
-                    <span className="text-[11px] font-mono text-blue-800 bg-blue-50 px-2 py-0.5 rounded-md border border-blue-200 font-semibold">
-                      24/7/365 Live
+                    <span className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-semibold shrink-0">
+                      Live
                     </span>
                   </div>
-                  <p className="text-[11px] text-slate-600 mt-1">
-                    Serving hospitals, nursing centers, and industrial facilities statewide
+                  <p className="text-[11px] text-slate-600 mt-1 leading-snug">
+                    Warren headquarters • Serving facilities and professionals across Michigan
                   </p>
                 </div>
               </div>
 
-              {/* Overlapping Secondary Photo: Confident Healthcare Professional */}
-              <div className="hidden sm:block absolute -bottom-6 -left-6 w-48 h-56 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-white z-20">
-                <Image
-                  src="/images/candidate-healthcare-professional.jpg"
-                  alt="Credentialed nurse and clinician ready for rapid assignment"
-                  fill
-                  sizes="192px"
-                  className="object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
-                <div className="absolute bottom-2 left-2 right-2 text-[10px] font-bold text-white text-center bg-slate-900/85 backdrop-blur-xs py-1 px-1.5 rounded-lg border border-white/20">
-                  600+ Credentialed Roster
+              {/* Mobile Dedicated Card: Positioned below the image on mobile to eliminate clipping and facial overlap */}
+              <div className="sm:hidden mt-3 p-3.5 bg-white rounded-2xl border border-slate-200 text-slate-900 shadow-soft-md">
+                <div className="flex items-center justify-between">
+                  <span className="font-bold text-slate-900 text-xs flex items-center gap-1.5">
+                    <Building className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+                    <span>Michiganwide staffing coverage</span>
+                  </span>
+                  <span className="text-[10px] font-mono text-emerald-800 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 font-semibold shrink-0">
+                    Live
+                  </span>
                 </div>
+                <p className="text-[11px] text-slate-600 mt-1 leading-snug">
+                  Warren headquarters • Serving facilities and professionals across Michigan
+                </p>
+              </div>
+
+              {/* Floating Accent Badge: 600+ Credentialed Roster (Anchored safely at top-right on tablet/desktop) */}
+              <div className="hidden md:flex items-center gap-2 absolute -top-3.5 -right-3.5 px-3.5 py-1.5 rounded-xl bg-slate-900/90 text-white backdrop-blur-md border border-white/20 shadow-md text-xs font-semibold z-20">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>600+ Credentialed Roster</span>
               </div>
 
             </div>

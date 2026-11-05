@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { generatePageMetadata } from "@/lib/config/seo";
+import { AgendrixExperienceSection } from "@/components/careers/AgendrixExperienceSection";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "60-Second Express Apply",
@@ -150,6 +151,9 @@ export default function ApplyPage({
         </div>
 
       </div>
+
+      {/* Agendrix Candidate Experience Section */}
+      <AgendrixExperienceSection />
 
     </div>
   );

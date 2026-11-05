@@ -69,7 +69,7 @@ export const siteConfig: SiteConfig = {
     operationalHours: "24/7 Operational Dispatch",
     callbackTime: "30-Minute Callback Commitment",
     credentialedStaff: "600+ Credentialed Staff",
-    triCounty: "Oakland • Wayne • Macomb & Expanding Across Michigan and the US",
+    triCounty: "Michiganwide Workforce Coverage • Warren Headquarters",
   },
   contacts: {
     primaryRecipient: "sharon@vibrusgroup.com",

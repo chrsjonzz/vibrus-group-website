@@ -107,7 +107,7 @@ export default function TestimonialsPage() {
       <section className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 text-center space-y-4">
         <h2 className="text-xl sm:text-2xl font-bold">Client and Clinician Endorsement Submissions</h2>
         <p className="text-xs text-slate-400 max-w-lg mx-auto">
-          Executive leadership (Paddy and Achla) will review and approve formal client references and partner quotes before public release on vibrusgroup.com.
+          Executive leadership will review and approve formal client references and partner quotes before public release on vibrusgroup.com.
         </p>
         <div className="pt-2">
           <Link

@@ -55,7 +55,7 @@ export function TestimonialsSection() {
 
         {/* Notice */}
         <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 text-center text-xs text-slate-500 max-w-xl mx-auto">
-          Notice: Verbatim client testimonials and partner references will be published following executive review by Paddy and Achla.
+          Notice: Verbatim client testimonials and partner references will be published following executive management review.
         </div>
 
       </div>

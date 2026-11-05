@@ -9,6 +9,7 @@ import { SearchableFacilityDirectory } from "@/components/coverage/SearchableFac
 import { WhyVibrusSection } from "@/components/home/WhyVibrusSection";
 import { TestimonialsSection } from "@/components/home/TestimonialsSection";
 import { CtaBanner } from "@/components/home/CtaBanner";
+import { AgendrixExperienceSection } from "@/components/careers/AgendrixExperienceSection";
 import { MapPin, Building, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { generatePageMetadata } from "@/lib/config/seo";
@@ -33,6 +34,11 @@ export default function HomePage() {
 
       {/* 3. Guided Journey: How It Works for Facilities & Candidates */}
       <GuidedExperienceSection />
+
+      {/* 3b. Agendrix Candidate Mobile Scheduling Experience Teaser */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <AgendrixExperienceSection variant="compact" />
+      </div>
 
       {/* 4. Specialized Industry Divisions */}
       <DivisionsGrid />

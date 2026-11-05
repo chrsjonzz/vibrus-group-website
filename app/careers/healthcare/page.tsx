@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Stethoscope, CheckCircle2, ArrowRight, ShieldCheck, HeartHandshake } from "lucide-react";
 import { generatePageMetadata } from "@/lib/config/seo";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { AgendrixExperienceSection } from "@/components/careers/AgendrixExperienceSection";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Healthcare Nursing & Allied Roles",
@@ -98,6 +99,9 @@ export default function HealthcareCareersPage() {
           ))}
         </div>
       </section>
+
+      {/* Agendrix Mobile Scheduling Experience */}
+      <AgendrixExperienceSection />
     </div>
   );
 }

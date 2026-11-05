@@ -5,22 +5,24 @@ import crypto from "crypto";
 import os from "os";
 import { siteConfig } from "@/lib/config/site";
 
-const ALLOWED_EXTENSIONS = [".pdf", ".docx", ".doc", ".txt"];
-const MAX_FILE_SIZE_BYTES = 5 * 1024 * 1024; // 5 MB
+const ALLOWED_EXTENSIONS = [".pdf", ".docx", ".doc", ".txt", ".png", ".jpg", ".jpeg"];
+const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10 MB per file
+const MAX_TOTAL_SIZE_BYTES = 40 * 1024 * 1024; // 40 MB total
+const MAX_FILE_COUNT = 10;
 
 async function storeFileSafely(filename: string, buffer: Buffer): Promise<{ success: boolean; storageLocation: string }> {
-  // Primary target: secure_uploads in working directory
   const primaryDir = path.join(process.cwd(), "secure_uploads");
   try {
     await mkdir(primaryDir, { recursive: true });
-    await writeFile(path.join(primaryDir, filename), buffer);
+    const safePath = path.join(primaryDir, path.basename(filename));
+    await writeFile(safePath, buffer);
     return { success: true, storageLocation: "local_private_storage" };
   } catch (err) {
-    // Fallback for read-only serverless environments (e.g., Vercel Lambda /tmp)
     try {
       const fallbackDir = path.join(os.tmpdir(), "vibrus_secure_uploads");
       await mkdir(fallbackDir, { recursive: true });
-      await writeFile(path.join(fallbackDir, filename), buffer);
+      const safeFallbackPath = path.join(fallbackDir, path.basename(filename));
+      await writeFile(safeFallbackPath, buffer);
       return { success: true, storageLocation: "ephemeral_serverless_tmp" };
     } catch (fallbackErr) {
       console.warn("Storage fallback warning: Running in non-writable serverless demo mode. Document logged in-memory.");
@@ -33,17 +35,18 @@ export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
 
-    const facilityName = (formData.get("facilityName") as string || "").trim();
-    const facilityType = (formData.get("facilityType") as string || "").trim();
-    const contactName = (formData.get("contactName") as string || "").trim();
-    const contactPhone = (formData.get("contactPhone") as string || "").trim();
-    const contactEmail = (formData.get("contactEmail") as string || "").trim();
-    const positionNeeded = (formData.get("positionNeeded") as string || "").trim();
-    const numberOfStaff = (formData.get("numberOfStaff") as string || "1").trim();
-    const shiftType = (formData.get("shiftType") as string || "").trim();
-    const urgency = (formData.get("urgency") as string || "").trim();
-    const county = (formData.get("county") as string || "").trim();
-    const notes = (formData.get("notes") as string || "").trim();
+    const facilityName = ((formData.get("facilityName") as string) || "").trim();
+    const facilityType = ((formData.get("facilityType") as string) || "").trim();
+    const contactName = ((formData.get("contactName") as string) || "").trim();
+    const contactPhone = ((formData.get("contactPhone") as string) || "").trim();
+    const contactEmail = ((formData.get("contactEmail") as string) || "").trim();
+    const city = ((formData.get("city") as string) || "").trim();
+    const county = ((formData.get("county") as string) || "").trim();
+    const positionNeeded = ((formData.get("positionNeeded") as string) || "").trim();
+    const numberOfStaff = ((formData.get("numberOfStaff") as string) || "").trim();
+    const shiftType = ((formData.get("shiftType") as string) || "").trim();
+    const urgency = ((formData.get("urgency") as string) || "").trim();
+    const notes = ((formData.get("notes") as string) || "").trim();
 
     // Required fields validation
     if (!facilityName || !contactName || !contactPhone || !contactEmail || !positionNeeded) {
@@ -53,37 +56,71 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const requisitionFile = formData.get("requisitionFile") as File | null;
-    let fileWasAttached = false;
-    let internalSecureFilename: string | null = null;
+    // Collect all files
+    const rawFiles: File[] = [];
+    const filesList = formData.getAll("files") as File[];
+    const requisitionFilesList = formData.getAll("requisitionFiles") as File[];
+    const singleReq = formData.get("requisitionFile") as File | null;
 
-    if (requisitionFile && requisitionFile.size > 0) {
-      // 1. File size check
-      if (requisitionFile.size > MAX_FILE_SIZE_BYTES) {
+    if (filesList.length > 0) {
+      rawFiles.push(...filesList);
+    } else if (requisitionFilesList.length > 0) {
+      rawFiles.push(...requisitionFilesList);
+    } else if (singleReq && singleReq.size > 0) {
+      rawFiles.push(singleReq);
+    }
+
+    if (rawFiles.length > MAX_FILE_COUNT) {
+      return NextResponse.json(
+        { error: `Maximum file limit exceeded. You can attach up to ${MAX_FILE_COUNT} files.` },
+        { status: 400 }
+      );
+    }
+
+    let totalUploadSize = 0;
+    const storedFilesMeta: { originalName: string; size: number; storedReference: string }[] = [];
+
+    for (const f of rawFiles) {
+      if (!f || f.size === 0) continue;
+
+      totalUploadSize += f.size;
+      if (totalUploadSize > MAX_TOTAL_SIZE_BYTES) {
         return NextResponse.json(
-          { error: `File size exceeds the 5 MB limit. Selected file is ${(requisitionFile.size / (1024 * 1024)).toFixed(2)} MB.` },
+          { error: `Total upload size exceeds the ${(MAX_TOTAL_SIZE_BYTES / (1024 * 1024)).toFixed(0)} MB limit.` },
           { status: 400 }
         );
       }
 
-      // 2. File extension validation
-      const ext = path.extname(requisitionFile.name).toLowerCase();
+      if (f.size > MAX_FILE_SIZE_BYTES) {
+        return NextResponse.json(
+          { error: `File "${f.name}" exceeds the ${(MAX_FILE_SIZE_BYTES / (1024 * 1024)).toFixed(0)} MB limit (${(f.size / (1024 * 1024)).toFixed(2)} MB).` },
+          { status: 400 }
+        );
+      }
+
+      const ext = path.extname(f.name).toLowerCase();
       if (!ALLOWED_EXTENSIONS.includes(ext)) {
         return NextResponse.json(
-          { error: `Invalid file type (${ext}). Only PDF, Word (.doc, .docx), and plain text (.txt) documents are accepted.` },
+          { error: `Invalid file format (${ext}) for "${f.name}". Only PDF, Word, text, and image files are accepted.` },
           { status: 400 }
         );
       }
 
-      // 3. Store in non-public secure storage with randomized UUID
-      const bytes = await requisitionFile.arrayBuffer();
-      const buffer = Buffer.from(bytes);
+      // Safe normalized base name preventing path traversal
+      const safeBase = path.basename(f.name).replace(/[^a-zA-Z0-9._-]/g, "_").slice(0, 60);
       const secureId = crypto.randomUUID();
-      internalSecureFilename = `req_${secureId}${ext}`;
+      const internalSecureFilename = `req_${Date.now()}_${secureId}_${safeBase}`;
 
-      const storageResult = await storeFileSafely(internalSecureFilename, buffer);
-      fileWasAttached = true;
-      console.log(`[Storage Mode] Requisition saved via: ${storageResult.storageLocation}`);
+      const bytes = await f.arrayBuffer();
+      const buffer = Buffer.from(bytes);
+
+      await storeFileSafely(internalSecureFilename, buffer);
+
+      storedFilesMeta.push({
+        originalName: f.name,
+        size: f.size,
+        storedReference: internalSecureFilename,
+      });
     }
 
     const trackingId = `REQ-${Date.now().toString(36).toUpperCase()}`;
@@ -96,14 +133,13 @@ export async function POST(request: NextRequest) {
     console.log(`Urgency: ${urgency} | County: ${county}`);
     console.log(`Active Demo Recipient: ${siteConfig.contacts.primaryRecipient}`);
     console.log(`Delivery Mode: ${siteConfig.contacts.deliveryMode}`);
-    if (fileWasAttached) {
-      console.log(`Attachment: Stored securely in local private directory (secure_uploads/${internalSecureFilename})`);
-    } else {
-      console.log("Attachment: None provided");
-    }
+    console.log(`Attached Files Count: ${storedFilesMeta.length}`);
+    storedFilesMeta.forEach((item, idx) => {
+      console.log(`  File ${idx + 1}: ${item.originalName} (${(item.size / 1024).toFixed(1)} KB) -> secure_uploads/${item.storedReference}`);
+    });
     console.log("=========================================");
 
-    // Note: Do NOT expose public web URLs to client
+    // Private response: do NOT expose public URLs
     return NextResponse.json({
       success: true,
       trackingId,
@@ -114,8 +150,12 @@ export async function POST(request: NextRequest) {
       mode: siteConfig.contacts.deliveryMode,
       notificationStatus: "Recorded to local server log (Actual email transport pending production integration)",
       storedLocally: true,
-      documentAttached: fileWasAttached,
-      internalFileReference: fileWasAttached ? internalSecureFilename : null,
+      internalFileReference: storedFilesMeta[0]?.storedReference || null,
+      filesAttachedCount: storedFilesMeta.length,
+      filesSummary: storedFilesMeta.map((item) => ({
+        name: item.originalName,
+        size: item.size,
+      })),
     });
   } catch (error: any) {
     console.error("Error processing staff request:", error);

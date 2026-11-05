@@ -100,24 +100,25 @@ export function Navbar() {
           {/* Brand Logo & Name */}
           <Link
             href="/"
-            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-xl p-1.5 transition-transform hover:scale-[1.01]"
+            className="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-blue-600 rounded-xl p-1 transition-transform hover:scale-[1.01]"
+            aria-label="Vibrus Group - Return to homepage"
           >
-            <div className="relative w-12 h-12 rounded-xl overflow-hidden border border-slate-200/90 bg-white shadow-md flex items-center justify-center p-1 group-hover:border-blue-400 transition-colors">
+            <div className="relative h-11 w-28 sm:h-12 sm:w-32 flex items-center justify-start">
               <Image
-                src="/images/vibrus-logo.jpg"
-                alt="Vibrus Group Logo"
-                width={46}
-                height={46}
-                className="object-contain"
+                src="/images/vibrus-logo-2x.png"
+                alt="Vibrus Group Workforce Solutions Logo"
+                width={132}
+                height={50}
+                className="h-full w-auto object-contain transition-opacity group-hover:opacity-95"
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-extrabold tracking-tight text-vibrus-navy group-hover:text-blue-700 transition-colors">
-                VIBRUS GROUP
+            <div className="hidden sm:flex flex-col border-l border-slate-200 pl-3">
+              <span className="text-xs font-extrabold tracking-wider text-vibrus-navy uppercase">
+                Workforce Solutions
               </span>
-              <span className="text-[10px] font-semibold text-slate-500 tracking-wider uppercase">
-                Workforce Solutions • Est. Michigan
+              <span className="text-[10px] font-semibold text-slate-500 tracking-wider">
+                Warren HQ • Michiganwide Reach
               </span>
             </div>
           </Link>

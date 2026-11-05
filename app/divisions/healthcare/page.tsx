@@ -103,7 +103,7 @@ export default function HealthcareDivisionPage() {
                     <span>Primary-Source Credentialed</span>
                   </span>
                   <span className="text-blue-800 font-semibold text-[11px]">
-                    24/7 Tri-County Dispatch
+                    24/7 Michiganwide Dispatch
                   </span>
                 </div>
               </div>

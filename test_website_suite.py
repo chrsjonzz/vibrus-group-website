@@ -195,13 +195,13 @@ def test_request_staff_validation():
         else:
             print(f"  [FAIL] Expected 400 for .exe but got {e.code}")
 
-    # 3c: Oversized file (> 5 MB)
+    # 3c: Oversized file (> 10 MB)
     boundary = "----VibrusBoundaryVal3"
     body = bytearray()
     for k, v in fields.items():
         body.extend(f"--{boundary}\r\nContent-Disposition: form-data; name=\"{k}\"\r\n\r\n{v}\r\n".encode())
-    # 5.1 MB of dummy data
-    oversized = b"0" * (5 * 1024 * 1024 + 1024)
+    # 10.1 MB of dummy data (exceeds 10 MB limit)
+    oversized = b"0" * (10 * 1024 * 1024 + 1024)
     body.extend(f"--{boundary}\r\nContent-Disposition: form-data; name=\"requisitionFile\"; filename=\"huge.pdf\"\r\nContent-Type: application/pdf\r\n\r\n".encode())
     body.extend(oversized)
     body.extend(f"\r\n--{boundary}--\r\n".encode())
@@ -215,10 +215,10 @@ def test_request_staff_validation():
         urllib.request.urlopen(req, timeout=15)
     except urllib.error.HTTPError as e:
         if e.code == 400:
-            print("  [PASS] File exceeding 5 MB limit correctly returned HTTP 400")
+            print("  [PASS] File exceeding 10 MB limit correctly returned HTTP 400")
             val3_ok = True
         else:
-            print(f"  [FAIL] Expected 400 for >5MB but got {e.code}")
+            print(f"  [FAIL] Expected 400 for >10MB but got {e.code}")
 
     return val1_ok and val2_ok and val3_ok
 

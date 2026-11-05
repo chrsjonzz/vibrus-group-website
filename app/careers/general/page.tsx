@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Truck, CheckCircle2, ArrowRight, ShieldCheck, Wrench } from "lucide-react";
 import { generatePageMetadata } from "@/lib/config/seo";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
+import { AgendrixExperienceSection } from "@/components/careers/AgendrixExperienceSection";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Industrial & Commercial Roles",
@@ -100,6 +101,9 @@ export default function GeneralCareersPage() {
           ))}
         </div>
       </section>
+
+      {/* Agendrix Mobile Scheduling Experience */}
+      <AgendrixExperienceSection />
     </div>
   );
 }

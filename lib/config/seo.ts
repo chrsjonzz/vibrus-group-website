@@ -99,13 +99,9 @@ export const schemaOrgData = {
     url: siteUrl,
     logo: `${siteUrl}/images/vibrus-logo.jpg`,
     description:
-      "Women-Owned Minority Small Business Enterprise (WMBE) based in Warren, MI, providing clinical healthcare, industrial, and specialized staffing across Southeast Michigan.",
+      "Women-Owned Minority Small Business Enterprise (WMBE) headquartered in Warren, MI, providing clinical healthcare, industrial, and specialized workforce staffing across Michigan.",
     telephone: "+1-248-443-5100",
     faxNumber: "+1-248-443-5115",
-    founder: [
-      { "@type": "Person", name: "Paddy" },
-      { "@type": "Person", name: "Achla" },
-    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: "31201 Chicago Road South, Suite B202",
@@ -115,10 +111,10 @@ export const schemaOrgData = {
       addressCountry: "US",
     },
     areaServed: [
+      { "@type": "State", name: "Michigan" },
       { "@type": "AdministrativeArea", name: "Macomb County, MI" },
       { "@type": "AdministrativeArea", name: "Oakland County, MI" },
       { "@type": "AdministrativeArea", name: "Wayne County, MI" },
-      { "@type": "State", name: "Michigan" },
     ],
     contactPoint: [
       {

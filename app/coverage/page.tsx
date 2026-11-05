@@ -26,13 +26,13 @@ export default function CoveragePage() {
           <div className="lg:col-span-7 space-y-5">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-cyan-50 text-cyan-900 border border-cyan-200 rounded-full text-xs font-bold shadow-2xs">
               <MapPin className="w-3.5 h-3.5 text-cyan-600" />
-              <span>Warren HQ • Tri-County Dispatch Core</span>
+              <span>Warren Headquarters • Michiganwide Workforce Coverage</span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
               Michigan Regional Coverage
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-              Headquartered in Warren, Michigan, Vibrus Group delivers 24/7 staffing dispatch across <strong>Macomb, Oakland, and Wayne counties</strong>, with expanding operations across Michigan and the United States.
+              Headquartered in Warren, Michigan, Vibrus Group provides statewide workforce dispatch to healthcare systems, skilled nursing facilities, and industrial partners across Michigan, anchored by deep regional roots in Macomb, Oakland, and Wayne counties.
             </p>
             <div className="flex flex-wrap items-center gap-3.5 pt-2">
               <Link
