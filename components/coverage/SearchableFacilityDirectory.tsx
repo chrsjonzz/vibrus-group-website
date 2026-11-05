@@ -154,7 +154,7 @@ export function SearchableFacilityDirectory() {
 
             <div className="pt-2">
               <Link
-                href={`/employers?facility=${encodeURIComponent(area.name)}&county=${area.county}`}
+                href={`/employers?facility=${encodeURIComponent(area.name)}&county=${encodeURIComponent(area.county)}`}
                 className="w-full flex items-center justify-center gap-1.5 py-2 px-3 bg-slate-900 hover:bg-blue-700 text-white font-semibold rounded-lg text-xs transition-colors"
               >
                 <span>Request Staffing in this Sector</span>

@@ -429,7 +429,7 @@ export function Navbar() {
 
       {/* Mobile Navigation Drawer (Independent from desktop state) */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-200 bg-white shadow-2xl px-4 pt-3 pb-8 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-2 duration-150">
+        <div id="mobile-nav-panel" className="lg:hidden border-t border-slate-200 bg-white shadow-2xl px-4 pt-3 pb-8 max-h-[85vh] overflow-y-auto animate-in slide-in-from-top-2 duration-150">
           <div className="space-y-2">
             {/* Primary Action Buttons */}
             <div className="grid grid-cols-2 gap-2 mb-4">

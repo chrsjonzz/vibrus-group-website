@@ -36,3 +36,5 @@ next-env.d.ts
 secure_uploads/*
 !secure_uploads/README.md
 
+
+.vercel

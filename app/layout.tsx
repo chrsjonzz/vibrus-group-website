@@ -9,6 +9,12 @@ import { siteUrl, isProduction, schemaOrgData } from "@/lib/config/seo";
 
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
+const previewHost = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}`
+  : isProduction
+  ? siteUrl
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
   title: {
     default: "Healthcare & Industrial Staffing | Vibrus Group",
@@ -16,7 +22,7 @@ export const metadata: Metadata = {
   },
   description:
     "Warren, Michigan staffing agency providing 24/7 credentialed healthcare personnel, industrial workforce, and specialized staffing across Southeast Michigan.",
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(previewHost),
   alternates: isProduction
     ? {
         canonical: siteUrl,
