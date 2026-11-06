@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { siteConfig } from "@/lib/config/site";
 import { generatePageMetadata } from "@/lib/config/seo";
+import { ManagementApprovalRegister } from "@/components/management/ManagementApprovalRegister";
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Management Review Checklist",
@@ -147,6 +148,9 @@ export default function ManagementReviewPage() {
           );
         })}
       </div>
+
+      {/* Complete 72-Point Interactive Production Approval Ledger */}
+      <ManagementApprovalRegister />
 
       {/* Action Footer */}
       <div className="p-6 bg-slate-900 text-white rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
