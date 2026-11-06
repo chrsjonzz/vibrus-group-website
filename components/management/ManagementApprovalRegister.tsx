@@ -9,7 +9,7 @@ export function ManagementApprovalRegister() {
   const [selectedArea, setSelectedArea] = useState<string>("All");
   const [selectedStatus, setSelectedStatus] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("All");
-  const [hideSorted, setHideSorted] = useState<boolean>(false);
+  const [hideSorted, setHideSorted] = useState<boolean>(true);
   const [savedNotification, setSavedNotification] = useState<boolean>(false);
   const [copiedNotification, setCopiedNotification] = useState<boolean>(false);
 
@@ -111,8 +111,8 @@ export function ManagementApprovalRegister() {
   // Filtered Items (With Hide Approved / Sorted toggle support)
   const filtered = useMemo(() => {
     return items.filter(item => {
-      // If hideSorted is active, hide items that have been approved or sorted
-      if (hideSorted && (item.status === "Approved" || item.status === "Approved (Staging)")) {
+      // If hideSorted is active, hide items that have been approved or sorted (show only what needs approval)
+      if (hideSorted && item.status !== "Pending Review") {
         return false;
       }
       const matchArea = selectedArea === "All" || item.area === selectedArea;
@@ -218,7 +218,7 @@ export function ManagementApprovalRegister() {
             }`}
           >
             {hideSorted ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
-            <span>{hideSorted ? "Showing: Only What Needs Approval" : "Filter: Hide Approved/Sorted"}</span>
+            <span>{hideSorted ? `Showing: Only What Needs Approval (${filtered.length})` : "Showing: All 72 Items (Click to Hide Approved)"}</span>
           </button>
 
           <div className="text-xs text-slate-500 font-medium">
