@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useMemo, useEffect } from "react";
-import { Download, Filter, Search, ShieldCheck, Save } from "lucide-react";
+import { Download, Filter, Search, ShieldCheck, Save, Copy, Check, Eye, EyeOff } from "lucide-react";
 import { APPROVAL_REGISTER_ITEMS, ApprovalItem } from "@/lib/data/approvalRegisterData";
 
 export function ManagementApprovalRegister() {
@@ -9,14 +9,19 @@ export function ManagementApprovalRegister() {
   const [selectedArea, setSelectedArea] = useState<string>("All");
   const [selectedStatus, setSelectedStatus] = useState<string>("All");
   const [searchQuery, setSearchQuery] = useState<string>("All");
+  const [hideSorted, setHideSorted] = useState<boolean>(false);
   const [savedNotification, setSavedNotification] = useState<boolean>(false);
+  const [copiedNotification, setCopiedNotification] = useState<boolean>(false);
 
   // Restore from localStorage on mount if available
   useEffect(() => {
     const saved = localStorage.getItem("vibrus_management_approvals");
     if (saved) {
       try {
-        setItems(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setItems(parsed);
+        }
       } catch (e) {}
     }
   }, []);
@@ -48,6 +53,7 @@ export function ManagementApprovalRegister() {
     setTimeout(() => setSavedNotification(false), 3000);
   };
 
+  // Safe Blob-based CSV Export (Never truncated by # or URL length)
   const handleExportCSV = () => {
     const headers = ["Item #", "Area", "Current Demo Behavior", "Decision Required", "Recommended Option", "Owner", "Status", "Executive Notes", "Milestone"];
     const rows = items.map(i => [
@@ -62,14 +68,31 @@ export function ManagementApprovalRegister() {
       `"${i.milestone.replace(/"/g, '""')}"`
     ]);
 
-    const csvContent = "data:text/csv;charset=utf-8," + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
-    const encodedUri = encodeURI(csvContent);
+    const csvContent = [headers.join(","), ...rows.map(r => r.join(","))].join("\r\n");
+    const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
+    link.setAttribute("href", url);
     link.setAttribute("download", "Vibrus_Group_Management_Approval_Decisions.csv");
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
+  // One-click clipboard copy of modified decisions
+  const handleCopyDecisions = () => {
+    const modified = items.filter(i => i.status !== "Pending Review" || (i.notes && i.notes.trim().length > 0));
+    if (modified.length === 0) {
+      navigator.clipboard.writeText("No decisions updated yet.");
+    } else {
+      const summary = modified.map(i => 
+        `Item ${i.num} (${i.area}): [${i.status}] - Decision: ${i.decision} | Notes: ${i.notes || "None"} | Milestone: ${i.milestone}`
+      ).join("\n\n");
+      navigator.clipboard.writeText(summary);
+    }
+    setCopiedNotification(true);
+    setTimeout(() => setCopiedNotification(false), 3000);
   };
 
   // KPIs
@@ -80,20 +103,25 @@ export function ManagementApprovalRegister() {
     const pending = items.filter(i => i.status === "Pending Review").length;
     const edits = items.filter(i => i.status === "Approved with Edits").length;
     const rejected = items.filter(i => i.status.includes("Rejected") || i.status.includes("Hold")).length;
-    const progress = Math.round(((staging + approved + edits + rejected) / total) * 100);
-    return { total, staging, approved, pending, edits, rejected, progress };
+    const sortedCount = approved + staging + edits + rejected;
+    const progress = Math.round((sortedCount / total) * 100);
+    return { total, staging, approved, pending, edits, rejected, sortedCount, progress };
   }, [items]);
 
-  // Filtered Items
+  // Filtered Items (With Hide Approved / Sorted toggle support)
   const filtered = useMemo(() => {
     return items.filter(item => {
+      // If hideSorted is active, hide items that have been approved or sorted
+      if (hideSorted && (item.status === "Approved" || item.status === "Approved (Staging)")) {
+        return false;
+      }
       const matchArea = selectedArea === "All" || item.area === selectedArea;
       const matchStatus = selectedStatus === "All" || item.status === selectedStatus;
       const q = searchQuery === "All" ? "" : searchQuery.toLowerCase().trim();
       const matchSearch = !q || (item.num + item.area + item.behavior + item.decision + item.recommended + item.owner + item.notes).toLowerCase().includes(q);
       return matchArea && matchStatus && matchSearch;
     });
-  }, [items, selectedArea, selectedStatus, searchQuery]);
+  }, [items, selectedArea, selectedStatus, searchQuery, hideSorted]);
 
   const categories = ["All", "Business Claims", "Leadership & Identity", "Contact Routing", "Email & IONOS", "File Uploads", "Recruiting Integrations", "Facility Requests", "Content & Visual Assets", "Legal & Compliance", "Coverage & Locations", "Domain & Ownership", "SEO & Legacy URLs"];
   const statuses = ["All", "Pending Review", "Approved", "Approved (Staging)", "Approved with Edits", "Rejected", "Hold for Legal / Exec"];
@@ -112,27 +140,39 @@ export function ManagementApprovalRegister() {
             72-Point Production Approval Ledger
           </h2>
           <p className="text-xs text-slate-500 mt-1">
-            Review each item, select your decision from the drop-downs below, and export the finalized record.
+            Review each item, select your decision from the drop-downs below, and export or copy your finalized record.
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+        <div className="flex flex-wrap items-center gap-2.5 w-full md:w-auto">
           <button
             onClick={handleExportCSV}
-            className="flex items-center gap-2 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition active:scale-95"
+            title="Download full CSV with all decisions"
+            className="flex items-center gap-1.5 px-4 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs rounded-xl shadow-xs transition active:scale-95"
           >
             <Download className="w-4 h-4" />
             <span>Export to Excel (CSV)</span>
           </button>
+          
+          <button
+            onClick={handleCopyDecisions}
+            title="Copy all modified decisions to clipboard to paste in chat or email"
+            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs rounded-xl shadow-xs transition active:scale-95"
+          >
+            {copiedNotification ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+            <span>{copiedNotification ? "Copied to Clipboard!" : "Copy Decisions"}</span>
+          </button>
+
           <button
             onClick={handleSave}
-            className="flex items-center gap-2 px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-xs transition active:scale-95"
+            className="flex items-center gap-1.5 px-3.5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-xl shadow-xs transition active:scale-95"
           >
             <Save className="w-4 h-4" />
             <span>Save Progress</span>
           </button>
+          
           {savedNotification && (
-            <span className="text-xs font-bold text-emerald-600 animate-pulse">Saved to browser!</span>
+            <span className="text-xs font-bold text-emerald-600 animate-pulse">Saved!</span>
           )}
         </div>
       </div>
@@ -165,44 +205,56 @@ export function ManagementApprovalRegister() {
         </div>
       </div>
 
-      {/* Search & Filters */}
-      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs flex flex-col md:flex-row items-center justify-between gap-3">
-        <div className="relative w-full md:w-80">
-          <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
-          <input
-            type="text"
-            value={searchQuery === "All" ? "" : searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search claims, decisions, or owners..."
-            className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 outline-none"
-          />
+      {/* Filter Toolbar with "Only Items Needing Approval" Toggle */}
+      <div className="bg-white p-4 rounded-2xl border border-slate-200 shadow-2xs flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
+          {/* View Filter Toggle (Needs Approval vs All) */}
+          <button
+            onClick={() => setHideSorted(!hideSorted)}
+            className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition border ${
+              hideSorted 
+                ? "bg-amber-500 text-white border-amber-600 shadow-xs" 
+                : "bg-slate-100 text-slate-700 border-slate-200 hover:bg-slate-200"
+            }`}
+          >
+            {hideSorted ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+            <span>{hideSorted ? "Showing: Only What Needs Approval" : "Filter: Hide Approved/Sorted"}</span>
+          </button>
+
+          <div className="text-xs text-slate-500 font-medium">
+            Showing <strong>{filtered.length}</strong> of {items.length} items
+          </div>
         </div>
 
         <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
-          <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
-            <Filter className="w-3.5 h-3.5" />
-            <span>Category:</span>
+          <div className="relative w-full sm:w-56">
+            <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-2.5" />
+            <input
+              type="text"
+              value={searchQuery === "All" ? "" : searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search items..."
+              className="w-full pl-8 pr-3 py-1.5 text-xs rounded-xl border border-slate-200 focus:ring-2 focus:ring-blue-600 outline-none"
+            />
           </div>
+
           <select
             value={selectedArea}
             onChange={(e) => setSelectedArea(e.target.value)}
             className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-800 outline-none focus:ring-2 focus:ring-blue-600"
           >
             {categories.map(c => (
-              <option key={c} value={c}>{c === "All" ? "All Categories (12)" : c}</option>
+              <option key={c} value={c}>{c === "All" ? "All Categories" : c}</option>
             ))}
           </select>
 
-          <div className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold ml-2">
-            <span>Status:</span>
-          </div>
           <select
             value={selectedStatus}
             onChange={(e) => setSelectedStatus(e.target.value)}
             className="text-xs font-semibold px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white text-slate-800 outline-none focus:ring-2 focus:ring-blue-600"
           >
             {statuses.map(s => (
-              <option key={s} value={s}>{s}</option>
+              <option key={s} value={s}>{s === "All" ? "All Statuses" : s}</option>
             ))}
           </select>
         </div>
